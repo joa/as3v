@@ -1,0 +1,71 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BD4215E-3620-4DA0-B1C5-FE06744F8CE6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AS3V</RootNamespace>
+    <AssemblyName>AS3V</AssemblyName>
+    <StartupObject>AS3V.Program</StartupObject>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeModel\Exceptions\RangeException.cs" />
+    <Compile Include="CodeModel\Generic\Enumerators\CompilationUnitEnumerator.cs" />
+    <Compile Include="CodeModel\Generic\Enumerators\PackageEnumerator.cs" />
+    <Compile Include="CodeModel\Generic\Enumerators\PackageRootEnumerator.cs" />
+    <Compile Include="CodeModel\Generic\ICompilationUnit.cs" />
+    <Compile Include="CodeModel\Generic\IPackage.cs" />
+    <Compile Include="CodeModel\Generic\IPackageRoot.cs" />
+    <Compile Include="CodeModel\Generic\IProject.cs" />
+    <Compile Include="CodeModel\Generic\Parser\Enumerators\ParserWarningEnumerator.cs" />
+    <Compile Include="CodeModel\Generic\Parser\Enumerators\ParserErrorEnumerator.cs" />
+    <Compile Include="CodeModel\Generic\Parser\IParser.cs" />
+    <Compile Include="CodeModel\Generic\Parser\ParserError.cs" />
+    <Compile Include="CodeModel\Generic\Parser\ParserWarning.cs" />
+    <Compile Include="CodeModel\Language\AS3\AS3CompilationUnit.cs" />
+    <Compile Include="CodeModel\Language\AS3\AS3Package.cs" />
+    <Compile Include="CodeModel\Language\AS3\AS3PackageRoot.cs" />
+    <Compile Include="CodeModel\Language\AS3\AS3Project.cs" />
+    <Compile Include="CodeModel\Language\AS3\Parser\AS3Parser.cs" />
+    <Compile Include="CodeModel\Language\AS3\Parser\AS3Parser Parse.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CodeModel\Language\AS3\Parser\AST\Nodes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
