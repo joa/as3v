@@ -92,7 +92,9 @@ namespace AS3V.CodeModel.Language.AS3
 
         public void Parse()
         {
+#if DEBUG
             Console.WriteLine("\tParsing " + UnitPath);
+#endif
             _parser.Start(this);
         }
 
