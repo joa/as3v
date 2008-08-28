@@ -1016,15 +1016,15 @@ forInStatementInitialiserPart
 	;
 
 continueStatement
-	: 'continue' Identifier? (LineTerminator | ';')!
+	: 'continue' Identifier? (LineTerminator | ';')
 	;
 
 breakStatement
-	: 'break' Identifier? (LineTerminator | ';')!
+	: 'break' Identifier? (LineTerminator | ';')
 	;
 
 returnStatement
-	: 'return' expression? (LineTerminator | ';')!
+	: 'return' expression? (LineTerminator | ';')
 	;
 	
 withStatement

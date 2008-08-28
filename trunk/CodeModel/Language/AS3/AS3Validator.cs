@@ -10,6 +10,7 @@ using AS3V.CodeModel.Exceptions;
 using AS3V.CodeModel.Generic.Parser.Enumerators;
 using Antlr.Runtime.Tree;
 using System.Collections;
+using Antlr.Runtime.Debug;
 
 namespace AS3V.CodeModel.Language.AS3
 {
@@ -29,11 +30,14 @@ namespace AS3V.CodeModel.Language.AS3
         {
             AS3Lexer lexer = new AS3Lexer(new ANTLRFileStream(unit.FilePath));
             ITokenStream tokens = new CommonTokenStream(lexer);
-            AS3Parser parser = new AS3Parser(tokens);
+            ParseTreeBuilder builder = new ParseTreeBuilder("AS3");
+            AS3Parser parser = new AS3Parser(tokens);//, builder);
             
             try
             {
                 AS3Parser.compilationUnit_return r = parser.compilationUnit();
+
+                Console.WriteLine(builder.Tree.ToStringTree());
 
                 CommonTree tree = ((CommonTree)r.Tree);
                 CommonTreeNodeStream nodes = new CommonTreeNodeStream(tree);

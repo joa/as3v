@@ -1,4 +1,4 @@
-// $ANTLR 3.1 AS3.g 2008-08-28 11:50:39
+// $ANTLR 3.1 AS3.g 2008-08-28 13:35:11
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
 // Unreachable code detected.
@@ -11273,6 +11273,7 @@ public partial class AS3Parser : Parser
             	if ( input.LA(1) == LineTerminator || input.LA(1) == 90 ) 
             	{
             	    input.Consume();
+            	    if ( state.backtracking == 0 ) adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set346));
             	    state.errorRecovery = false;state.failed = false;
             	}
             	else 
@@ -11348,7 +11349,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal347=(IToken)Match(input,97,FOLLOW_97_in_breakStatement5412); if (state.failed) return retval;
+            	string_literal347=(IToken)Match(input,97,FOLLOW_97_in_breakStatement5411); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal347_tree = (CommonTree)adaptor.Create(string_literal347);
             		adaptor.AddChild(root_0, string_literal347_tree);
@@ -11366,7 +11367,7 @@ public partial class AS3Parser : Parser
             	    case 1 :
             	        // AS3.g:0:0: Identifier
             	        {
-            	        	Identifier348=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_breakStatement5414); if (state.failed) return retval;
+            	        	Identifier348=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_breakStatement5413); if (state.failed) return retval;
             	        	if ( state.backtracking == 0 )
             	        	{Identifier348_tree = (CommonTree)adaptor.Create(Identifier348);
             	        		adaptor.AddChild(root_0, Identifier348_tree);
@@ -11381,6 +11382,7 @@ public partial class AS3Parser : Parser
             	if ( input.LA(1) == LineTerminator || input.LA(1) == 90 ) 
             	{
             	    input.Consume();
+            	    if ( state.backtracking == 0 ) adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set349));
             	    state.errorRecovery = false;state.failed = false;
             	}
             	else 
@@ -11456,7 +11458,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal350=(IToken)Match(input,98,FOLLOW_98_in_returnStatement5435); if (state.failed) return retval;
+            	string_literal350=(IToken)Match(input,98,FOLLOW_98_in_returnStatement5433); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal350_tree = (CommonTree)adaptor.Create(string_literal350);
             		adaptor.AddChild(root_0, string_literal350_tree);
@@ -11469,7 +11471,7 @@ public partial class AS3Parser : Parser
             	    case 1 :
             	        // AS3.g:0:0: expression
             	        {
-            	        	PushFollow(FOLLOW_expression_in_returnStatement5437);
+            	        	PushFollow(FOLLOW_expression_in_returnStatement5435);
             	        	expression351 = expression();
             	        	state.followingStackPointer--;
             	        	if (state.failed) return retval;
@@ -11484,6 +11486,7 @@ public partial class AS3Parser : Parser
             	if ( input.LA(1) == LineTerminator || input.LA(1) == 90 ) 
             	{
             	    input.Consume();
+            	    if ( state.backtracking == 0 ) adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set352));
             	    state.errorRecovery = false;state.failed = false;
             	}
             	else 
@@ -11571,7 +11574,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal353=(IToken)Match(input,99,FOLLOW_99_in_withStatement5459); if (state.failed) return retval;
+            	string_literal353=(IToken)Match(input,99,FOLLOW_99_in_withStatement5456); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal353_tree = (CommonTree)adaptor.Create(string_literal353);
             		adaptor.AddChild(root_0, string_literal353_tree);
@@ -11593,7 +11596,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator354=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5461); if (state.failed) return retval;
+            			    	LineTerminator354=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5458); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator354_tree = (CommonTree)adaptor.Create(LineTerminator354);
             			    		adaptor.AddChild(root_0, LineTerminator354_tree);
@@ -11610,7 +11613,7 @@ public partial class AS3Parser : Parser
             	loop181:
             		;	// Stops C# compiler whining that label 'loop181' has no statements
 
-            	char_literal355=(IToken)Match(input,36,FOLLOW_36_in_withStatement5464); if (state.failed) return retval;
+            	char_literal355=(IToken)Match(input,36,FOLLOW_36_in_withStatement5461); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal355_tree = (CommonTree)adaptor.Create(char_literal355);
             		adaptor.AddChild(root_0, char_literal355_tree);
@@ -11625,7 +11628,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator356=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5466); if (state.failed) return retval;
+            			    	LineTerminator356=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5463); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator356_tree = (CommonTree)adaptor.Create(LineTerminator356);
             			    		adaptor.AddChild(root_0, LineTerminator356_tree);
@@ -11642,7 +11645,7 @@ public partial class AS3Parser : Parser
             	loop182:
             		;	// Stops C# compiler whining that label 'loop182' has no statements
 
-            	PushFollow(FOLLOW_expression_in_withStatement5469);
+            	PushFollow(FOLLOW_expression_in_withStatement5466);
             	expression357 = expression();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -11664,7 +11667,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator358=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5471); if (state.failed) return retval;
+            			    	LineTerminator358=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5468); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator358_tree = (CommonTree)adaptor.Create(LineTerminator358);
             			    		adaptor.AddChild(root_0, LineTerminator358_tree);
@@ -11681,7 +11684,7 @@ public partial class AS3Parser : Parser
             	loop183:
             		;	// Stops C# compiler whining that label 'loop183' has no statements
 
-            	char_literal359=(IToken)Match(input,37,FOLLOW_37_in_withStatement5474); if (state.failed) return retval;
+            	char_literal359=(IToken)Match(input,37,FOLLOW_37_in_withStatement5471); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal359_tree = (CommonTree)adaptor.Create(char_literal359);
             		adaptor.AddChild(root_0, char_literal359_tree);
@@ -11696,7 +11699,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator360=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5476); if (state.failed) return retval;
+            			    	LineTerminator360=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_withStatement5473); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator360_tree = (CommonTree)adaptor.Create(LineTerminator360);
             			    		adaptor.AddChild(root_0, LineTerminator360_tree);
@@ -11713,7 +11716,7 @@ public partial class AS3Parser : Parser
             	loop184:
             		;	// Stops C# compiler whining that label 'loop184' has no statements
 
-            	PushFollow(FOLLOW_statement_in_withStatement5479);
+            	PushFollow(FOLLOW_statement_in_withStatement5476);
             	statement361 = statement();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -11796,7 +11799,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal362=(IToken)Match(input,100,FOLLOW_100_in_switchStatement5491); if (state.failed) return retval;
+            	string_literal362=(IToken)Match(input,100,FOLLOW_100_in_switchStatement5488); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal362_tree = (CommonTree)adaptor.Create(string_literal362);
             		adaptor.AddChild(root_0, string_literal362_tree);
@@ -11818,7 +11821,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator363=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5493); if (state.failed) return retval;
+            			    	LineTerminator363=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5490); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator363_tree = (CommonTree)adaptor.Create(LineTerminator363);
             			    		adaptor.AddChild(root_0, LineTerminator363_tree);
@@ -11835,7 +11838,7 @@ public partial class AS3Parser : Parser
             	loop185:
             		;	// Stops C# compiler whining that label 'loop185' has no statements
 
-            	char_literal364=(IToken)Match(input,36,FOLLOW_36_in_switchStatement5496); if (state.failed) return retval;
+            	char_literal364=(IToken)Match(input,36,FOLLOW_36_in_switchStatement5493); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal364_tree = (CommonTree)adaptor.Create(char_literal364);
             		adaptor.AddChild(root_0, char_literal364_tree);
@@ -11850,7 +11853,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator365=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5498); if (state.failed) return retval;
+            			    	LineTerminator365=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5495); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator365_tree = (CommonTree)adaptor.Create(LineTerminator365);
             			    		adaptor.AddChild(root_0, LineTerminator365_tree);
@@ -11867,7 +11870,7 @@ public partial class AS3Parser : Parser
             	loop186:
             		;	// Stops C# compiler whining that label 'loop186' has no statements
 
-            	PushFollow(FOLLOW_expression_in_switchStatement5501);
+            	PushFollow(FOLLOW_expression_in_switchStatement5498);
             	expression366 = expression();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -11889,7 +11892,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator367=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5503); if (state.failed) return retval;
+            			    	LineTerminator367=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5500); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator367_tree = (CommonTree)adaptor.Create(LineTerminator367);
             			    		adaptor.AddChild(root_0, LineTerminator367_tree);
@@ -11906,7 +11909,7 @@ public partial class AS3Parser : Parser
             	loop187:
             		;	// Stops C# compiler whining that label 'loop187' has no statements
 
-            	char_literal368=(IToken)Match(input,37,FOLLOW_37_in_switchStatement5506); if (state.failed) return retval;
+            	char_literal368=(IToken)Match(input,37,FOLLOW_37_in_switchStatement5503); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal368_tree = (CommonTree)adaptor.Create(char_literal368);
             		adaptor.AddChild(root_0, char_literal368_tree);
@@ -11928,7 +11931,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator369=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5508); if (state.failed) return retval;
+            			    	LineTerminator369=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_switchStatement5505); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator369_tree = (CommonTree)adaptor.Create(LineTerminator369);
             			    		adaptor.AddChild(root_0, LineTerminator369_tree);
@@ -11945,7 +11948,7 @@ public partial class AS3Parser : Parser
             	loop188:
             		;	// Stops C# compiler whining that label 'loop188' has no statements
 
-            	PushFollow(FOLLOW_caseBlock_in_switchStatement5511);
+            	PushFollow(FOLLOW_caseBlock_in_switchStatement5508);
             	caseBlock370 = caseBlock();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -12028,7 +12031,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	char_literal371=(IToken)Match(input,41,FOLLOW_41_in_caseBlock5523); if (state.failed) return retval;
+            	char_literal371=(IToken)Match(input,41,FOLLOW_41_in_caseBlock5520); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal371_tree = (CommonTree)adaptor.Create(char_literal371);
             		adaptor.AddChild(root_0, char_literal371_tree);
@@ -12089,7 +12092,7 @@ public partial class AS3Parser : Parser
             			    			case 1 :
             			    			    // AS3.g:0:0: LineTerminator
             			    			    {
-            			    			    	LineTerminator372=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5526); if (state.failed) return retval;
+            			    			    	LineTerminator372=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5523); if (state.failed) return retval;
             			    			    	if ( state.backtracking == 0 )
             			    			    	{LineTerminator372_tree = (CommonTree)adaptor.Create(LineTerminator372);
             			    			    		adaptor.AddChild(root_0, LineTerminator372_tree);
@@ -12106,7 +12109,7 @@ public partial class AS3Parser : Parser
             			    	loop189:
             			    		;	// Stops C# compiler whining that label 'loop189' has no statements
 
-            			    	PushFollow(FOLLOW_caseClause_in_caseBlock5529);
+            			    	PushFollow(FOLLOW_caseClause_in_caseBlock5526);
             			    	caseClause373 = caseClause();
             			    	state.followingStackPointer--;
             			    	if (state.failed) return retval;
@@ -12171,7 +12174,7 @@ public partial class AS3Parser : Parser
             	        			case 1 :
             	        			    // AS3.g:0:0: LineTerminator
             	        			    {
-            	        			    	LineTerminator374=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5534); if (state.failed) return retval;
+            	        			    	LineTerminator374=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5531); if (state.failed) return retval;
             	        			    	if ( state.backtracking == 0 )
             	        			    	{LineTerminator374_tree = (CommonTree)adaptor.Create(LineTerminator374);
             	        			    		adaptor.AddChild(root_0, LineTerminator374_tree);
@@ -12188,7 +12191,7 @@ public partial class AS3Parser : Parser
             	        	loop191:
             	        		;	// Stops C# compiler whining that label 'loop191' has no statements
 
-            	        	PushFollow(FOLLOW_defaultClause_in_caseBlock5537);
+            	        	PushFollow(FOLLOW_defaultClause_in_caseBlock5534);
             	        	defaultClause375 = defaultClause();
             	        	state.followingStackPointer--;
             	        	if (state.failed) return retval;
@@ -12249,7 +12252,7 @@ public partial class AS3Parser : Parser
             	        			    			case 1 :
             	        			    			    // AS3.g:0:0: LineTerminator
             	        			    			    {
-            	        			    			    	LineTerminator376=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5540); if (state.failed) return retval;
+            	        			    			    	LineTerminator376=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5537); if (state.failed) return retval;
             	        			    			    	if ( state.backtracking == 0 )
             	        			    			    	{LineTerminator376_tree = (CommonTree)adaptor.Create(LineTerminator376);
             	        			    			    		adaptor.AddChild(root_0, LineTerminator376_tree);
@@ -12266,7 +12269,7 @@ public partial class AS3Parser : Parser
             	        			    	loop192:
             	        			    		;	// Stops C# compiler whining that label 'loop192' has no statements
 
-            	        			    	PushFollow(FOLLOW_caseClause_in_caseBlock5543);
+            	        			    	PushFollow(FOLLOW_caseClause_in_caseBlock5540);
             	        			    	caseClause377 = caseClause();
             	        			    	state.followingStackPointer--;
             	        			    	if (state.failed) return retval;
@@ -12306,7 +12309,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator378=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5549); if (state.failed) return retval;
+            			    	LineTerminator378=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseBlock5546); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator378_tree = (CommonTree)adaptor.Create(LineTerminator378);
             			    		adaptor.AddChild(root_0, LineTerminator378_tree);
@@ -12323,7 +12326,7 @@ public partial class AS3Parser : Parser
             	loop195:
             		;	// Stops C# compiler whining that label 'loop195' has no statements
 
-            	char_literal379=(IToken)Match(input,42,FOLLOW_42_in_caseBlock5552); if (state.failed) return retval;
+            	char_literal379=(IToken)Match(input,42,FOLLOW_42_in_caseBlock5549); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal379_tree = (CommonTree)adaptor.Create(char_literal379);
             		adaptor.AddChild(root_0, char_literal379_tree);
@@ -12402,7 +12405,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal380=(IToken)Match(input,101,FOLLOW_101_in_caseClause5563); if (state.failed) return retval;
+            	string_literal380=(IToken)Match(input,101,FOLLOW_101_in_caseClause5560); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal380_tree = (CommonTree)adaptor.Create(string_literal380);
             		adaptor.AddChild(root_0, string_literal380_tree);
@@ -12417,7 +12420,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator381=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseClause5565); if (state.failed) return retval;
+            			    	LineTerminator381=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseClause5562); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator381_tree = (CommonTree)adaptor.Create(LineTerminator381);
             			    		adaptor.AddChild(root_0, LineTerminator381_tree);
@@ -12434,7 +12437,7 @@ public partial class AS3Parser : Parser
             	loop196:
             		;	// Stops C# compiler whining that label 'loop196' has no statements
 
-            	PushFollow(FOLLOW_expression_in_caseClause5568);
+            	PushFollow(FOLLOW_expression_in_caseClause5565);
             	expression382 = expression();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -12456,7 +12459,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator383=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseClause5570); if (state.failed) return retval;
+            			    	LineTerminator383=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseClause5567); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator383_tree = (CommonTree)adaptor.Create(LineTerminator383);
             			    		adaptor.AddChild(root_0, LineTerminator383_tree);
@@ -12473,7 +12476,7 @@ public partial class AS3Parser : Parser
             	loop197:
             		;	// Stops C# compiler whining that label 'loop197' has no statements
 
-            	char_literal384=(IToken)Match(input,43,FOLLOW_43_in_caseClause5573); if (state.failed) return retval;
+            	char_literal384=(IToken)Match(input,43,FOLLOW_43_in_caseClause5570); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal384_tree = (CommonTree)adaptor.Create(char_literal384);
             		adaptor.AddChild(root_0, char_literal384_tree);
@@ -12488,7 +12491,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator385=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseClause5575); if (state.failed) return retval;
+            			    	LineTerminator385=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_caseClause5572); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator385_tree = (CommonTree)adaptor.Create(LineTerminator385);
             			    		adaptor.AddChild(root_0, LineTerminator385_tree);
@@ -12513,7 +12516,7 @@ public partial class AS3Parser : Parser
             	    case 1 :
             	        // AS3.g:0:0: statementList
             	        {
-            	        	PushFollow(FOLLOW_statementList_in_caseClause5578);
+            	        	PushFollow(FOLLOW_statementList_in_caseClause5575);
             	        	statementList386 = statementList();
             	        	state.followingStackPointer--;
             	        	if (state.failed) return retval;
@@ -12594,7 +12597,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal387=(IToken)Match(input,102,FOLLOW_102_in_defaultClause5591); if (state.failed) return retval;
+            	string_literal387=(IToken)Match(input,102,FOLLOW_102_in_defaultClause5588); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal387_tree = (CommonTree)adaptor.Create(string_literal387);
             		adaptor.AddChild(root_0, string_literal387_tree);
@@ -12616,7 +12619,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator388=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_defaultClause5593); if (state.failed) return retval;
+            			    	LineTerminator388=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_defaultClause5590); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator388_tree = (CommonTree)adaptor.Create(LineTerminator388);
             			    		adaptor.AddChild(root_0, LineTerminator388_tree);
@@ -12633,7 +12636,7 @@ public partial class AS3Parser : Parser
             	loop200:
             		;	// Stops C# compiler whining that label 'loop200' has no statements
 
-            	char_literal389=(IToken)Match(input,43,FOLLOW_43_in_defaultClause5596); if (state.failed) return retval;
+            	char_literal389=(IToken)Match(input,43,FOLLOW_43_in_defaultClause5593); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal389_tree = (CommonTree)adaptor.Create(char_literal389);
             		adaptor.AddChild(root_0, char_literal389_tree);
@@ -12648,7 +12651,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator390=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_defaultClause5598); if (state.failed) return retval;
+            			    	LineTerminator390=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_defaultClause5595); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator390_tree = (CommonTree)adaptor.Create(LineTerminator390);
             			    		adaptor.AddChild(root_0, LineTerminator390_tree);
@@ -12673,7 +12676,7 @@ public partial class AS3Parser : Parser
             	    case 1 :
             	        // AS3.g:0:0: statementList
             	        {
-            	        	PushFollow(FOLLOW_statementList_in_defaultClause5601);
+            	        	PushFollow(FOLLOW_statementList_in_defaultClause5598);
             	        	statementList391 = statementList();
             	        	state.followingStackPointer--;
             	        	if (state.failed) return retval;
@@ -12754,7 +12757,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	Identifier392=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_labelledStatement5614); if (state.failed) return retval;
+            	Identifier392=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_labelledStatement5611); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{Identifier392_tree = (CommonTree)adaptor.Create(Identifier392);
             		adaptor.AddChild(root_0, Identifier392_tree);
@@ -12776,7 +12779,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator393=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_labelledStatement5616); if (state.failed) return retval;
+            			    	LineTerminator393=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_labelledStatement5613); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator393_tree = (CommonTree)adaptor.Create(LineTerminator393);
             			    		adaptor.AddChild(root_0, LineTerminator393_tree);
@@ -12793,7 +12796,7 @@ public partial class AS3Parser : Parser
             	loop203:
             		;	// Stops C# compiler whining that label 'loop203' has no statements
 
-            	char_literal394=(IToken)Match(input,43,FOLLOW_43_in_labelledStatement5619); if (state.failed) return retval;
+            	char_literal394=(IToken)Match(input,43,FOLLOW_43_in_labelledStatement5616); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal394_tree = (CommonTree)adaptor.Create(char_literal394);
             		adaptor.AddChild(root_0, char_literal394_tree);
@@ -12808,7 +12811,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator395=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_labelledStatement5621); if (state.failed) return retval;
+            			    	LineTerminator395=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_labelledStatement5618); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator395_tree = (CommonTree)adaptor.Create(LineTerminator395);
             			    		adaptor.AddChild(root_0, LineTerminator395_tree);
@@ -12825,7 +12828,7 @@ public partial class AS3Parser : Parser
             	loop204:
             		;	// Stops C# compiler whining that label 'loop204' has no statements
 
-            	PushFollow(FOLLOW_statement_in_labelledStatement5624);
+            	PushFollow(FOLLOW_statement_in_labelledStatement5621);
             	statement396 = statement();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -12898,12 +12901,12 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal397=(IToken)Match(input,103,FOLLOW_103_in_throwStatement5636); if (state.failed) return retval;
+            	string_literal397=(IToken)Match(input,103,FOLLOW_103_in_throwStatement5633); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal397_tree = (CommonTree)adaptor.Create(string_literal397);
             		adaptor.AddChild(root_0, string_literal397_tree);
             	}
-            	PushFollow(FOLLOW_expression_in_throwStatement5638);
+            	PushFollow(FOLLOW_expression_in_throwStatement5635);
             	expression398 = expression();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -12926,7 +12929,7 @@ public partial class AS3Parser : Parser
             	        			case 1 :
             	        			    // AS3.g:0:0: LineTerminator
             	        			    {
-            	        			    	LineTerminator399=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_throwStatement5641); if (state.failed) return retval;
+            	        			    	LineTerminator399=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_throwStatement5638); if (state.failed) return retval;
             	        			    	if ( state.backtracking == 0 )
             	        			    	{LineTerminator399_tree = (CommonTree)adaptor.Create(LineTerminator399);
             	        			    		adaptor.AddChild(root_0, LineTerminator399_tree);
@@ -12949,7 +12952,7 @@ public partial class AS3Parser : Parser
             	    case 2 :
             	        // AS3.g:1055:42: ';'
             	        {
-            	        	char_literal400=(IToken)Match(input,90,FOLLOW_90_in_throwStatement5646); if (state.failed) return retval;
+            	        	char_literal400=(IToken)Match(input,90,FOLLOW_90_in_throwStatement5643); if (state.failed) return retval;
             	        	if ( state.backtracking == 0 )
             	        	{char_literal400_tree = (CommonTree)adaptor.Create(char_literal400);
             	        		adaptor.AddChild(root_0, char_literal400_tree);
@@ -13036,7 +13039,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal401=(IToken)Match(input,104,FOLLOW_104_in_tryStatement5658); if (state.failed) return retval;
+            	string_literal401=(IToken)Match(input,104,FOLLOW_104_in_tryStatement5655); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal401_tree = (CommonTree)adaptor.Create(string_literal401);
             		adaptor.AddChild(root_0, string_literal401_tree);
@@ -13058,7 +13061,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator402=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_tryStatement5660); if (state.failed) return retval;
+            			    	LineTerminator402=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_tryStatement5657); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator402_tree = (CommonTree)adaptor.Create(LineTerminator402);
             			    		adaptor.AddChild(root_0, LineTerminator402_tree);
@@ -13075,7 +13078,7 @@ public partial class AS3Parser : Parser
             	loop207:
             		;	// Stops C# compiler whining that label 'loop207' has no statements
 
-            	PushFollow(FOLLOW_blockStatement_in_tryStatement5663);
+            	PushFollow(FOLLOW_blockStatement_in_tryStatement5660);
             	blockStatement403 = blockStatement();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -13097,7 +13100,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator404=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_tryStatement5665); if (state.failed) return retval;
+            			    	LineTerminator404=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_tryStatement5662); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator404_tree = (CommonTree)adaptor.Create(LineTerminator404);
             			    		adaptor.AddChild(root_0, LineTerminator404_tree);
@@ -13139,7 +13142,7 @@ public partial class AS3Parser : Parser
             	    case 1 :
             	        // AS3.g:1059:58: finallyClause
             	        {
-            	        	PushFollow(FOLLOW_finallyClause_in_tryStatement5669);
+            	        	PushFollow(FOLLOW_finallyClause_in_tryStatement5666);
             	        	finallyClause405 = finallyClause();
             	        	state.followingStackPointer--;
             	        	if (state.failed) return retval;
@@ -13150,7 +13153,7 @@ public partial class AS3Parser : Parser
             	    case 2 :
             	        // AS3.g:1059:74: catchClause ( ( LineTerminator )* finallyClause )?
             	        {
-            	        	PushFollow(FOLLOW_catchClause_in_tryStatement5673);
+            	        	PushFollow(FOLLOW_catchClause_in_tryStatement5670);
             	        	catchClause406 = catchClause();
             	        	state.followingStackPointer--;
             	        	if (state.failed) return retval;
@@ -13180,7 +13183,7 @@ public partial class AS3Parser : Parser
             	        	        			case 1 :
             	        	        			    // AS3.g:0:0: LineTerminator
             	        	        			    {
-            	        	        			    	LineTerminator407=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_tryStatement5676); if (state.failed) return retval;
+            	        	        			    	LineTerminator407=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_tryStatement5673); if (state.failed) return retval;
             	        	        			    	if ( state.backtracking == 0 )
             	        	        			    	{LineTerminator407_tree = (CommonTree)adaptor.Create(LineTerminator407);
             	        	        			    		adaptor.AddChild(root_0, LineTerminator407_tree);
@@ -13197,7 +13200,7 @@ public partial class AS3Parser : Parser
             	        	        	loop209:
             	        	        		;	// Stops C# compiler whining that label 'loop209' has no statements
 
-            	        	        	PushFollow(FOLLOW_finallyClause_in_tryStatement5679);
+            	        	        	PushFollow(FOLLOW_finallyClause_in_tryStatement5676);
             	        	        	finallyClause408 = finallyClause();
             	        	        	state.followingStackPointer--;
             	        	        	if (state.failed) return retval;
@@ -13292,7 +13295,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal409=(IToken)Match(input,105,FOLLOW_105_in_catchClause5700); if (state.failed) return retval;
+            	string_literal409=(IToken)Match(input,105,FOLLOW_105_in_catchClause5697); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal409_tree = (CommonTree)adaptor.Create(string_literal409);
             		adaptor.AddChild(root_0, string_literal409_tree);
@@ -13314,7 +13317,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator410=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5702); if (state.failed) return retval;
+            			    	LineTerminator410=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5699); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator410_tree = (CommonTree)adaptor.Create(LineTerminator410);
             			    		adaptor.AddChild(root_0, LineTerminator410_tree);
@@ -13331,7 +13334,7 @@ public partial class AS3Parser : Parser
             	loop212:
             		;	// Stops C# compiler whining that label 'loop212' has no statements
 
-            	char_literal411=(IToken)Match(input,36,FOLLOW_36_in_catchClause5705); if (state.failed) return retval;
+            	char_literal411=(IToken)Match(input,36,FOLLOW_36_in_catchClause5702); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal411_tree = (CommonTree)adaptor.Create(char_literal411);
             		adaptor.AddChild(root_0, char_literal411_tree);
@@ -13353,7 +13356,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator412=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5707); if (state.failed) return retval;
+            			    	LineTerminator412=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5704); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator412_tree = (CommonTree)adaptor.Create(LineTerminator412);
             			    		adaptor.AddChild(root_0, LineTerminator412_tree);
@@ -13370,7 +13373,7 @@ public partial class AS3Parser : Parser
             	loop213:
             		;	// Stops C# compiler whining that label 'loop213' has no statements
 
-            	Identifier413=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_catchClause5710); if (state.failed) return retval;
+            	Identifier413=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_catchClause5707); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{Identifier413_tree = (CommonTree)adaptor.Create(Identifier413);
             		adaptor.AddChild(root_0, Identifier413_tree);
@@ -13392,7 +13395,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator414=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5712); if (state.failed) return retval;
+            			    	LineTerminator414=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5709); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator414_tree = (CommonTree)adaptor.Create(LineTerminator414);
             			    		adaptor.AddChild(root_0, LineTerminator414_tree);
@@ -13409,7 +13412,7 @@ public partial class AS3Parser : Parser
             	loop214:
             		;	// Stops C# compiler whining that label 'loop214' has no statements
 
-            	char_literal415=(IToken)Match(input,37,FOLLOW_37_in_catchClause5715); if (state.failed) return retval;
+            	char_literal415=(IToken)Match(input,37,FOLLOW_37_in_catchClause5712); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal415_tree = (CommonTree)adaptor.Create(char_literal415);
             		adaptor.AddChild(root_0, char_literal415_tree);
@@ -13431,7 +13434,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator416=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5717); if (state.failed) return retval;
+            			    	LineTerminator416=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_catchClause5714); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator416_tree = (CommonTree)adaptor.Create(LineTerminator416);
             			    		adaptor.AddChild(root_0, LineTerminator416_tree);
@@ -13448,7 +13451,7 @@ public partial class AS3Parser : Parser
             	loop215:
             		;	// Stops C# compiler whining that label 'loop215' has no statements
 
-            	PushFollow(FOLLOW_blockStatement_in_catchClause5720);
+            	PushFollow(FOLLOW_blockStatement_in_catchClause5717);
             	blockStatement417 = blockStatement();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -13519,7 +13522,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal418=(IToken)Match(input,106,FOLLOW_106_in_finallyClause5732); if (state.failed) return retval;
+            	string_literal418=(IToken)Match(input,106,FOLLOW_106_in_finallyClause5729); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal418_tree = (CommonTree)adaptor.Create(string_literal418);
             		adaptor.AddChild(root_0, string_literal418_tree);
@@ -13541,7 +13544,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator419=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_finallyClause5734); if (state.failed) return retval;
+            			    	LineTerminator419=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_finallyClause5731); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator419_tree = (CommonTree)adaptor.Create(LineTerminator419);
             			    		adaptor.AddChild(root_0, LineTerminator419_tree);
@@ -13558,7 +13561,7 @@ public partial class AS3Parser : Parser
             	loop216:
             		;	// Stops C# compiler whining that label 'loop216' has no statements
 
-            	PushFollow(FOLLOW_blockStatement_in_finallyClause5737);
+            	PushFollow(FOLLOW_blockStatement_in_finallyClause5734);
             	blockStatement420 = blockStatement();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -13637,7 +13640,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal421=(IToken)Match(input,107,FOLLOW_107_in_functionDeclaration5752); if (state.failed) return retval;
+            	string_literal421=(IToken)Match(input,107,FOLLOW_107_in_functionDeclaration5749); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal421_tree = (CommonTree)adaptor.Create(string_literal421);
             		adaptor.AddChild(root_0, string_literal421_tree);
@@ -13659,7 +13662,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator422=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionDeclaration5754); if (state.failed) return retval;
+            			    	LineTerminator422=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionDeclaration5751); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator422_tree = (CommonTree)adaptor.Create(LineTerminator422);
             			    		adaptor.AddChild(root_0, LineTerminator422_tree);
@@ -13676,7 +13679,7 @@ public partial class AS3Parser : Parser
             	loop217:
             		;	// Stops C# compiler whining that label 'loop217' has no statements
 
-            	Identifier423=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_functionDeclaration5757); if (state.failed) return retval;
+            	Identifier423=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_functionDeclaration5754); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{Identifier423_tree = (CommonTree)adaptor.Create(Identifier423);
             		adaptor.AddChild(root_0, Identifier423_tree);
@@ -13698,7 +13701,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator424=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionDeclaration5759); if (state.failed) return retval;
+            			    	LineTerminator424=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionDeclaration5756); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator424_tree = (CommonTree)adaptor.Create(LineTerminator424);
             			    		adaptor.AddChild(root_0, LineTerminator424_tree);
@@ -13715,7 +13718,7 @@ public partial class AS3Parser : Parser
             	loop218:
             		;	// Stops C# compiler whining that label 'loop218' has no statements
 
-            	PushFollow(FOLLOW_formalParameterList_in_functionDeclaration5762);
+            	PushFollow(FOLLOW_formalParameterList_in_functionDeclaration5759);
             	formalParameterList425 = formalParameterList();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -13737,7 +13740,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator426=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionDeclaration5764); if (state.failed) return retval;
+            			    	LineTerminator426=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionDeclaration5761); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator426_tree = (CommonTree)adaptor.Create(LineTerminator426);
             			    		adaptor.AddChild(root_0, LineTerminator426_tree);
@@ -13754,7 +13757,7 @@ public partial class AS3Parser : Parser
             	loop219:
             		;	// Stops C# compiler whining that label 'loop219' has no statements
 
-            	PushFollow(FOLLOW_functionBody_in_functionDeclaration5767);
+            	PushFollow(FOLLOW_functionBody_in_functionDeclaration5764);
             	functionBody427 = functionBody();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -13833,7 +13836,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	string_literal428=(IToken)Match(input,107,FOLLOW_107_in_functionExpression5779); if (state.failed) return retval;
+            	string_literal428=(IToken)Match(input,107,FOLLOW_107_in_functionExpression5776); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{string_literal428_tree = (CommonTree)adaptor.Create(string_literal428);
             		adaptor.AddChild(root_0, string_literal428_tree);
@@ -13862,7 +13865,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator429=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionExpression5781); if (state.failed) return retval;
+            			    	LineTerminator429=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionExpression5778); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator429_tree = (CommonTree)adaptor.Create(LineTerminator429);
             			    		adaptor.AddChild(root_0, LineTerminator429_tree);
@@ -13892,7 +13895,7 @@ public partial class AS3Parser : Parser
             	    case 1 :
             	        // AS3.g:0:0: Identifier
             	        {
-            	        	Identifier430=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_functionExpression5784); if (state.failed) return retval;
+            	        	Identifier430=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_functionExpression5781); if (state.failed) return retval;
             	        	if ( state.backtracking == 0 )
             	        	{Identifier430_tree = (CommonTree)adaptor.Create(Identifier430);
             	        		adaptor.AddChild(root_0, Identifier430_tree);
@@ -13920,7 +13923,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator431=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionExpression5787); if (state.failed) return retval;
+            			    	LineTerminator431=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionExpression5784); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator431_tree = (CommonTree)adaptor.Create(LineTerminator431);
             			    		adaptor.AddChild(root_0, LineTerminator431_tree);
@@ -13937,7 +13940,7 @@ public partial class AS3Parser : Parser
             	loop222:
             		;	// Stops C# compiler whining that label 'loop222' has no statements
 
-            	PushFollow(FOLLOW_formalParameterList_in_functionExpression5790);
+            	PushFollow(FOLLOW_formalParameterList_in_functionExpression5787);
             	formalParameterList432 = formalParameterList();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -13959,7 +13962,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator433=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionExpression5792); if (state.failed) return retval;
+            			    	LineTerminator433=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionExpression5789); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator433_tree = (CommonTree)adaptor.Create(LineTerminator433);
             			    		adaptor.AddChild(root_0, LineTerminator433_tree);
@@ -13976,7 +13979,7 @@ public partial class AS3Parser : Parser
             	loop223:
             		;	// Stops C# compiler whining that label 'loop223' has no statements
 
-            	PushFollow(FOLLOW_functionBody_in_functionExpression5795);
+            	PushFollow(FOLLOW_functionBody_in_functionExpression5792);
             	functionBody434 = functionBody();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -14059,7 +14062,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	char_literal435=(IToken)Match(input,36,FOLLOW_36_in_formalParameterList5806); if (state.failed) return retval;
+            	char_literal435=(IToken)Match(input,36,FOLLOW_36_in_formalParameterList5803); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal435_tree = (CommonTree)adaptor.Create(char_literal435);
             		adaptor.AddChild(root_0, char_literal435_tree);
@@ -14112,7 +14115,7 @@ public partial class AS3Parser : Parser
             	        			case 1 :
             	        			    // AS3.g:0:0: LineTerminator
             	        			    {
-            	        			    	LineTerminator436=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5809); if (state.failed) return retval;
+            	        			    	LineTerminator436=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5806); if (state.failed) return retval;
             	        			    	if ( state.backtracking == 0 )
             	        			    	{LineTerminator436_tree = (CommonTree)adaptor.Create(LineTerminator436);
             	        			    		adaptor.AddChild(root_0, LineTerminator436_tree);
@@ -14129,7 +14132,7 @@ public partial class AS3Parser : Parser
             	        	loop224:
             	        		;	// Stops C# compiler whining that label 'loop224' has no statements
 
-            	        	Identifier437=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_formalParameterList5812); if (state.failed) return retval;
+            	        	Identifier437=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_formalParameterList5809); if (state.failed) return retval;
             	        	if ( state.backtracking == 0 )
             	        	{Identifier437_tree = (CommonTree)adaptor.Create(Identifier437);
             	        		adaptor.AddChild(root_0, Identifier437_tree);
@@ -14190,7 +14193,7 @@ public partial class AS3Parser : Parser
             	        			    			case 1 :
             	        			    			    // AS3.g:0:0: LineTerminator
             	        			    			    {
-            	        			    			    	LineTerminator438=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5815); if (state.failed) return retval;
+            	        			    			    	LineTerminator438=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5812); if (state.failed) return retval;
             	        			    			    	if ( state.backtracking == 0 )
             	        			    			    	{LineTerminator438_tree = (CommonTree)adaptor.Create(LineTerminator438);
             	        			    			    		adaptor.AddChild(root_0, LineTerminator438_tree);
@@ -14207,7 +14210,7 @@ public partial class AS3Parser : Parser
             	        			    	loop225:
             	        			    		;	// Stops C# compiler whining that label 'loop225' has no statements
 
-            	        			    	char_literal439=(IToken)Match(input,39,FOLLOW_39_in_formalParameterList5818); if (state.failed) return retval;
+            	        			    	char_literal439=(IToken)Match(input,39,FOLLOW_39_in_formalParameterList5815); if (state.failed) return retval;
             	        			    	if ( state.backtracking == 0 )
             	        			    	{char_literal439_tree = (CommonTree)adaptor.Create(char_literal439);
             	        			    		adaptor.AddChild(root_0, char_literal439_tree);
@@ -14229,7 +14232,7 @@ public partial class AS3Parser : Parser
             	        			    			case 1 :
             	        			    			    // AS3.g:0:0: LineTerminator
             	        			    			    {
-            	        			    			    	LineTerminator440=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5820); if (state.failed) return retval;
+            	        			    			    	LineTerminator440=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5817); if (state.failed) return retval;
             	        			    			    	if ( state.backtracking == 0 )
             	        			    			    	{LineTerminator440_tree = (CommonTree)adaptor.Create(LineTerminator440);
             	        			    			    		adaptor.AddChild(root_0, LineTerminator440_tree);
@@ -14246,7 +14249,7 @@ public partial class AS3Parser : Parser
             	        			    	loop226:
             	        			    		;	// Stops C# compiler whining that label 'loop226' has no statements
 
-            	        			    	Identifier441=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_formalParameterList5823); if (state.failed) return retval;
+            	        			    	Identifier441=(IToken)Match(input,Identifier,FOLLOW_Identifier_in_formalParameterList5820); if (state.failed) return retval;
             	        			    	if ( state.backtracking == 0 )
             	        			    	{Identifier441_tree = (CommonTree)adaptor.Create(Identifier441);
             	        			    		adaptor.AddChild(root_0, Identifier441_tree);
@@ -14286,7 +14289,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator442=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5829); if (state.failed) return retval;
+            			    	LineTerminator442=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_formalParameterList5826); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator442_tree = (CommonTree)adaptor.Create(LineTerminator442);
             			    		adaptor.AddChild(root_0, LineTerminator442_tree);
@@ -14303,7 +14306,7 @@ public partial class AS3Parser : Parser
             	loop229:
             		;	// Stops C# compiler whining that label 'loop229' has no statements
 
-            	char_literal443=(IToken)Match(input,37,FOLLOW_37_in_formalParameterList5832); if (state.failed) return retval;
+            	char_literal443=(IToken)Match(input,37,FOLLOW_37_in_formalParameterList5829); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal443_tree = (CommonTree)adaptor.Create(char_literal443);
             		adaptor.AddChild(root_0, char_literal443_tree);
@@ -14378,7 +14381,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	char_literal444=(IToken)Match(input,41,FOLLOW_41_in_functionBody5844); if (state.failed) return retval;
+            	char_literal444=(IToken)Match(input,41,FOLLOW_41_in_functionBody5841); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal444_tree = (CommonTree)adaptor.Create(char_literal444);
             		adaptor.AddChild(root_0, char_literal444_tree);
@@ -14393,7 +14396,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator445=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionBody5846); if (state.failed) return retval;
+            			    	LineTerminator445=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionBody5843); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator445_tree = (CommonTree)adaptor.Create(LineTerminator445);
             			    		adaptor.AddChild(root_0, LineTerminator445_tree);
@@ -14410,7 +14413,7 @@ public partial class AS3Parser : Parser
             	loop230:
             		;	// Stops C# compiler whining that label 'loop230' has no statements
 
-            	PushFollow(FOLLOW_sourceElements_in_functionBody5849);
+            	PushFollow(FOLLOW_sourceElements_in_functionBody5846);
             	sourceElements446 = sourceElements();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -14432,7 +14435,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator447=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionBody5851); if (state.failed) return retval;
+            			    	LineTerminator447=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_functionBody5848); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator447_tree = (CommonTree)adaptor.Create(LineTerminator447);
             			    		adaptor.AddChild(root_0, LineTerminator447_tree);
@@ -14449,7 +14452,7 @@ public partial class AS3Parser : Parser
             	loop231:
             		;	// Stops C# compiler whining that label 'loop231' has no statements
 
-            	char_literal448=(IToken)Match(input,42,FOLLOW_42_in_functionBody5854); if (state.failed) return retval;
+            	char_literal448=(IToken)Match(input,42,FOLLOW_42_in_functionBody5851); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{char_literal448_tree = (CommonTree)adaptor.Create(char_literal448);
             		adaptor.AddChild(root_0, char_literal448_tree);
@@ -14532,7 +14535,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator449=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_program5866); if (state.failed) return retval;
+            			    	LineTerminator449=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_program5863); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator449_tree = (CommonTree)adaptor.Create(LineTerminator449);
             			    		adaptor.AddChild(root_0, LineTerminator449_tree);
@@ -14549,7 +14552,7 @@ public partial class AS3Parser : Parser
             	loop232:
             		;	// Stops C# compiler whining that label 'loop232' has no statements
 
-            	PushFollow(FOLLOW_sourceElements_in_program5869);
+            	PushFollow(FOLLOW_sourceElements_in_program5866);
             	sourceElements450 = sourceElements();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -14571,7 +14574,7 @@ public partial class AS3Parser : Parser
             			case 1 :
             			    // AS3.g:0:0: LineTerminator
             			    {
-            			    	LineTerminator451=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_program5871); if (state.failed) return retval;
+            			    	LineTerminator451=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_program5868); if (state.failed) return retval;
             			    	if ( state.backtracking == 0 )
             			    	{LineTerminator451_tree = (CommonTree)adaptor.Create(LineTerminator451);
             			    		adaptor.AddChild(root_0, LineTerminator451_tree);
@@ -14588,7 +14591,7 @@ public partial class AS3Parser : Parser
             	loop233:
             		;	// Stops C# compiler whining that label 'loop233' has no statements
 
-            	EOF452=(IToken)Match(input,EOF,FOLLOW_EOF_in_program5874); if (state.failed) return retval;
+            	EOF452=(IToken)Match(input,EOF,FOLLOW_EOF_in_program5871); if (state.failed) return retval;
             	if ( state.backtracking == 0 )
             	{EOF452_tree = (CommonTree)adaptor.Create(EOF452);
             		adaptor.AddChild(root_0, EOF452_tree);
@@ -14659,7 +14662,7 @@ public partial class AS3Parser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	PushFollow(FOLLOW_sourceElement_in_sourceElements5885);
+            	PushFollow(FOLLOW_sourceElement_in_sourceElements5882);
             	sourceElement453 = sourceElement();
             	state.followingStackPointer--;
             	if (state.failed) return retval;
@@ -14684,7 +14687,7 @@ public partial class AS3Parser : Parser
             			    			case 1 :
             			    			    // AS3.g:0:0: LineTerminator
             			    			    {
-            			    			    	LineTerminator454=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_sourceElements5888); if (state.failed) return retval;
+            			    			    	LineTerminator454=(IToken)Match(input,LineTerminator,FOLLOW_LineTerminator_in_sourceElements5885); if (state.failed) return retval;
             			    			    	if ( state.backtracking == 0 )
             			    			    	{LineTerminator454_tree = (CommonTree)adaptor.Create(LineTerminator454);
             			    			    		adaptor.AddChild(root_0, LineTerminator454_tree);
@@ -14701,7 +14704,7 @@ public partial class AS3Parser : Parser
             			    	loop234:
             			    		;	// Stops C# compiler whining that label 'loop234' has no statements
 
-            			    	PushFollow(FOLLOW_sourceElement_in_sourceElements5891);
+            			    	PushFollow(FOLLOW_sourceElement_in_sourceElements5888);
             			    	sourceElement455 = sourceElement();
             			    	state.followingStackPointer--;
             			    	if (state.failed) return retval;
@@ -14787,7 +14790,7 @@ public partial class AS3Parser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
 
-                    	PushFollow(FOLLOW_statement_in_sourceElement5904);
+                    	PushFollow(FOLLOW_statement_in_sourceElement5901);
                     	statement456 = statement();
                     	state.followingStackPointer--;
                     	if (state.failed) return retval;
@@ -14800,7 +14803,7 @@ public partial class AS3Parser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
 
-                    	PushFollow(FOLLOW_functionDeclaration_in_sourceElement5909);
+                    	PushFollow(FOLLOW_functionDeclaration_in_sourceElement5906);
                     	functionDeclaration457 = functionDeclaration();
                     	state.followingStackPointer--;
                     	if (state.failed) return retval;
@@ -17721,7 +17724,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred260_AS35526); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred260_AS35523); if (state.failed) return ;
 
         			    }
         			    break;
@@ -17734,7 +17737,7 @@ public partial class AS3Parser : Parser
         	loop312:
         		;	// Stops C# compiler whining that label 'loop312' has no statements
 
-        	PushFollow(FOLLOW_caseClause_in_synpred260_AS35529);
+        	PushFollow(FOLLOW_caseClause_in_synpred260_AS35526);
         	caseClause();
         	state.followingStackPointer--;
         	if (state.failed) return ;
@@ -17766,7 +17769,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred263_AS35540); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred263_AS35537); if (state.failed) return ;
 
         			    }
         			    break;
@@ -17779,7 +17782,7 @@ public partial class AS3Parser : Parser
         	loop313:
         		;	// Stops C# compiler whining that label 'loop313' has no statements
 
-        	PushFollow(FOLLOW_caseClause_in_synpred263_AS35543);
+        	PushFollow(FOLLOW_caseClause_in_synpred263_AS35540);
         	caseClause();
         	state.followingStackPointer--;
         	if (state.failed) return ;
@@ -17811,7 +17814,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred264_AS35534); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred264_AS35531); if (state.failed) return ;
 
         			    }
         			    break;
@@ -17824,7 +17827,7 @@ public partial class AS3Parser : Parser
         	loop314:
         		;	// Stops C# compiler whining that label 'loop314' has no statements
 
-        	PushFollow(FOLLOW_defaultClause_in_synpred264_AS35537);
+        	PushFollow(FOLLOW_defaultClause_in_synpred264_AS35534);
         	defaultClause();
         	state.followingStackPointer--;
         	if (state.failed) return ;
@@ -17862,7 +17865,7 @@ public partial class AS3Parser : Parser
         			    			case 1 :
         			    			    // AS3.g:0:0: LineTerminator
         			    			    {
-        			    			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred264_AS35540); if (state.failed) return ;
+        			    			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred264_AS35537); if (state.failed) return ;
 
         			    			    }
         			    			    break;
@@ -17875,7 +17878,7 @@ public partial class AS3Parser : Parser
         			    	loop315:
         			    		;	// Stops C# compiler whining that label 'loop315' has no statements
 
-        			    	PushFollow(FOLLOW_caseClause_in_synpred264_AS35543);
+        			    	PushFollow(FOLLOW_caseClause_in_synpred264_AS35540);
         			    	caseClause();
         			    	state.followingStackPointer--;
         			    	if (state.failed) return ;
@@ -17902,7 +17905,7 @@ public partial class AS3Parser : Parser
         // AS3.g:1043:58: ( LineTerminator )
         // AS3.g:1043:58: LineTerminator
         {
-        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred268_AS35575); if (state.failed) return ;
+        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred268_AS35572); if (state.failed) return ;
 
         }
     }
@@ -17914,7 +17917,7 @@ public partial class AS3Parser : Parser
         // AS3.g:1047:34: ( LineTerminator )
         // AS3.g:1047:34: LineTerminator
         {
-        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred271_AS35598); if (state.failed) return ;
+        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred271_AS35595); if (state.failed) return ;
 
         }
     }
@@ -17926,7 +17929,7 @@ public partial class AS3Parser : Parser
         // AS3.g:1055:24: ( LineTerminator )
         // AS3.g:1055:24: LineTerminator
         {
-        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred275_AS35641); if (state.failed) return ;
+        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred275_AS35638); if (state.failed) return ;
 
         }
     }
@@ -17955,7 +17958,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred276_AS35641); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred276_AS35638); if (state.failed) return ;
 
         			    }
         			    break;
@@ -17996,7 +17999,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred281_AS35676); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred281_AS35673); if (state.failed) return ;
 
         			    }
         			    break;
@@ -18009,7 +18012,7 @@ public partial class AS3Parser : Parser
         	loop318:
         		;	// Stops C# compiler whining that label 'loop318' has no statements
 
-        	PushFollow(FOLLOW_finallyClause_in_synpred281_AS35679);
+        	PushFollow(FOLLOW_finallyClause_in_synpred281_AS35676);
         	finallyClause();
         	state.followingStackPointer--;
         	if (state.failed) return ;
@@ -18024,7 +18027,7 @@ public partial class AS3Parser : Parser
         // AS3.g:1079:15: ( LineTerminator )
         // AS3.g:1079:15: LineTerminator
         {
-        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred290_AS35781); if (state.failed) return ;
+        	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred290_AS35778); if (state.failed) return ;
 
         }
     }
@@ -18053,7 +18056,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred297_AS35815); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred297_AS35812); if (state.failed) return ;
 
         			    }
         			    break;
@@ -18066,7 +18069,7 @@ public partial class AS3Parser : Parser
         	loop319:
         		;	// Stops C# compiler whining that label 'loop319' has no statements
 
-        	Match(input,39,FOLLOW_39_in_synpred297_AS35818); if (state.failed) return ;
+        	Match(input,39,FOLLOW_39_in_synpred297_AS35815); if (state.failed) return ;
         	// AS3.g:1083:57: ( LineTerminator )*
         	do 
         	{
@@ -18084,7 +18087,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred297_AS35820); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred297_AS35817); if (state.failed) return ;
 
         			    }
         			    break;
@@ -18097,7 +18100,7 @@ public partial class AS3Parser : Parser
         	loop320:
         		;	// Stops C# compiler whining that label 'loop320' has no statements
 
-        	Match(input,Identifier,FOLLOW_Identifier_in_synpred297_AS35823); if (state.failed) return ;
+        	Match(input,Identifier,FOLLOW_Identifier_in_synpred297_AS35820); if (state.failed) return ;
 
         }
     }
@@ -18126,7 +18129,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred298_AS35809); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred298_AS35806); if (state.failed) return ;
 
         			    }
         			    break;
@@ -18139,7 +18142,7 @@ public partial class AS3Parser : Parser
         	loop321:
         		;	// Stops C# compiler whining that label 'loop321' has no statements
 
-        	Match(input,Identifier,FOLLOW_Identifier_in_synpred298_AS35812); if (state.failed) return ;
+        	Match(input,Identifier,FOLLOW_Identifier_in_synpred298_AS35809); if (state.failed) return ;
         	// AS3.g:1083:36: ( ( LineTerminator )* ',' ( LineTerminator )* Identifier )*
         	do 
         	{
@@ -18174,7 +18177,7 @@ public partial class AS3Parser : Parser
         			    			case 1 :
         			    			    // AS3.g:0:0: LineTerminator
         			    			    {
-        			    			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred298_AS35815); if (state.failed) return ;
+        			    			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred298_AS35812); if (state.failed) return ;
 
         			    			    }
         			    			    break;
@@ -18187,7 +18190,7 @@ public partial class AS3Parser : Parser
         			    	loop322:
         			    		;	// Stops C# compiler whining that label 'loop322' has no statements
 
-        			    	Match(input,39,FOLLOW_39_in_synpred298_AS35818); if (state.failed) return ;
+        			    	Match(input,39,FOLLOW_39_in_synpred298_AS35815); if (state.failed) return ;
         			    	// AS3.g:1083:57: ( LineTerminator )*
         			    	do 
         			    	{
@@ -18205,7 +18208,7 @@ public partial class AS3Parser : Parser
         			    			case 1 :
         			    			    // AS3.g:0:0: LineTerminator
         			    			    {
-        			    			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred298_AS35820); if (state.failed) return ;
+        			    			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred298_AS35817); if (state.failed) return ;
 
         			    			    }
         			    			    break;
@@ -18218,7 +18221,7 @@ public partial class AS3Parser : Parser
         			    	loop323:
         			    		;	// Stops C# compiler whining that label 'loop323' has no statements
 
-        			    	Match(input,Identifier,FOLLOW_Identifier_in_synpred298_AS35823); if (state.failed) return ;
+        			    	Match(input,Identifier,FOLLOW_Identifier_in_synpred298_AS35820); if (state.failed) return ;
 
         			    }
         			    break;
@@ -18252,7 +18255,7 @@ public partial class AS3Parser : Parser
         			case 1 :
         			    // AS3.g:0:0: LineTerminator
         			    {
-        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred305_AS35888); if (state.failed) return ;
+        			    	Match(input,LineTerminator,FOLLOW_LineTerminator_in_synpred305_AS35885); if (state.failed) return ;
 
         			    }
         			    break;
@@ -18265,7 +18268,7 @@ public partial class AS3Parser : Parser
         	loop325:
         		;	// Stops C# compiler whining that label 'loop325' has no statements
 
-        	PushFollow(FOLLOW_sourceElement_in_synpred305_AS35891);
+        	PushFollow(FOLLOW_sourceElement_in_synpred305_AS35888);
         	sourceElement();
         	state.followingStackPointer--;
         	if (state.failed) return ;
@@ -18280,7 +18283,7 @@ public partial class AS3Parser : Parser
         // AS3.g:1099:4: ( statement )
         // AS3.g:1099:4: statement
         {
-        	PushFollow(FOLLOW_statement_in_synpred306_AS35904);
+        	PushFollow(FOLLOW_statement_in_synpred306_AS35901);
         	statement();
         	state.followingStackPointer--;
         	if (state.failed) return ;
@@ -36561,117 +36564,117 @@ public partial class AS3Parser : Parser
     public static readonly BitSet FOLLOW_96_in_continueStatement5389 = new BitSet(new ulong[]{0x0000000000001020UL,0x0000000004000000UL});
     public static readonly BitSet FOLLOW_Identifier_in_continueStatement5391 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000000004000000UL});
     public static readonly BitSet FOLLOW_set_in_continueStatement5394 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_97_in_breakStatement5412 = new BitSet(new ulong[]{0x0000000000001020UL,0x0000000004000000UL});
-    public static readonly BitSet FOLLOW_Identifier_in_breakStatement5414 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000000004000000UL});
-    public static readonly BitSet FOLLOW_set_in_breakStatement5417 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_98_in_returnStatement5435 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080004000000UL});
-    public static readonly BitSet FOLLOW_expression_in_returnStatement5437 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000000004000000UL});
-    public static readonly BitSet FOLLOW_set_in_returnStatement5440 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_99_in_withStatement5459 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5461 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_36_in_withStatement5464 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5466 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
-    public static readonly BitSet FOLLOW_expression_in_withStatement5469 = new BitSet(new ulong[]{0x0000002000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5471 = new BitSet(new ulong[]{0x0000002000000020UL});
-    public static readonly BitSet FOLLOW_37_in_withStatement5474 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5476 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_statement_in_withStatement5479 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_100_in_switchStatement5491 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5493 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_36_in_switchStatement5496 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5498 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
-    public static readonly BitSet FOLLOW_expression_in_switchStatement5501 = new BitSet(new ulong[]{0x0000002000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5503 = new BitSet(new ulong[]{0x0000002000000020UL});
-    public static readonly BitSet FOLLOW_37_in_switchStatement5506 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5508 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_caseBlock_in_switchStatement5511 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_41_in_caseBlock5523 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5526 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000002000000000UL});
-    public static readonly BitSet FOLLOW_caseClause_in_caseBlock5529 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5534 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000004000000000UL});
-    public static readonly BitSet FOLLOW_defaultClause_in_caseBlock5537 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5540 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_caseClause_in_caseBlock5543 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5549 = new BitSet(new ulong[]{0x0000040000000020UL});
-    public static readonly BitSet FOLLOW_42_in_caseBlock5552 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_101_in_caseClause5563 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_caseClause5565 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
-    public static readonly BitSet FOLLOW_expression_in_caseClause5568 = new BitSet(new ulong[]{0x0000080000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_caseClause5570 = new BitSet(new ulong[]{0x0000080000000020UL});
-    public static readonly BitSet FOLLOW_43_in_caseClause5573 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_caseClause5575 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_statementList_in_caseClause5578 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_102_in_defaultClause5591 = new BitSet(new ulong[]{0x0000080000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_defaultClause5593 = new BitSet(new ulong[]{0x0000080000000020UL});
-    public static readonly BitSet FOLLOW_43_in_defaultClause5596 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_defaultClause5598 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_statementList_in_defaultClause5601 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_Identifier_in_labelledStatement5614 = new BitSet(new ulong[]{0x0000080000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_labelledStatement5616 = new BitSet(new ulong[]{0x0000080000000020UL});
-    public static readonly BitSet FOLLOW_43_in_labelledStatement5619 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_labelledStatement5621 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_statement_in_labelledStatement5624 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_103_in_throwStatement5636 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
-    public static readonly BitSet FOLLOW_expression_in_throwStatement5638 = new BitSet(new ulong[]{0x0000000000000022UL,0x0000000004000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_throwStatement5641 = new BitSet(new ulong[]{0x0000000000000022UL});
-    public static readonly BitSet FOLLOW_90_in_throwStatement5646 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_104_in_tryStatement5658 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_tryStatement5660 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_blockStatement_in_tryStatement5663 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000060000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_tryStatement5665 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000060000000000UL});
-    public static readonly BitSet FOLLOW_finallyClause_in_tryStatement5669 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_catchClause_in_tryStatement5673 = new BitSet(new ulong[]{0x0000000000000022UL,0x0000040000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_tryStatement5676 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000040000000000UL});
-    public static readonly BitSet FOLLOW_finallyClause_in_tryStatement5679 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_105_in_catchClause5700 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5702 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_36_in_catchClause5705 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5707 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_catchClause5710 = new BitSet(new ulong[]{0x0000002000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5712 = new BitSet(new ulong[]{0x0000002000000020UL});
-    public static readonly BitSet FOLLOW_37_in_catchClause5715 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5717 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_blockStatement_in_catchClause5720 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_106_in_finallyClause5732 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_finallyClause5734 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_blockStatement_in_finallyClause5737 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_107_in_functionDeclaration5752 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionDeclaration5754 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_functionDeclaration5757 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionDeclaration5759 = new BitSet(new ulong[]{0x0000001000000020UL});
-    public static readonly BitSet FOLLOW_formalParameterList_in_functionDeclaration5762 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionDeclaration5764 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_functionBody_in_functionDeclaration5767 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_107_in_functionExpression5779 = new BitSet(new ulong[]{0x0000001000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionExpression5781 = new BitSet(new ulong[]{0x0000001000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_functionExpression5784 = new BitSet(new ulong[]{0x0000001000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionExpression5787 = new BitSet(new ulong[]{0x0000001000001020UL});
-    public static readonly BitSet FOLLOW_formalParameterList_in_functionExpression5790 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionExpression5792 = new BitSet(new ulong[]{0x0000020000000020UL});
-    public static readonly BitSet FOLLOW_functionBody_in_functionExpression5795 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_36_in_formalParameterList5806 = new BitSet(new ulong[]{0x0000002000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5809 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_formalParameterList5812 = new BitSet(new ulong[]{0x000000A000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5815 = new BitSet(new ulong[]{0x0000008000000020UL});
-    public static readonly BitSet FOLLOW_39_in_formalParameterList5818 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5820 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_formalParameterList5823 = new BitSet(new ulong[]{0x000000A000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5829 = new BitSet(new ulong[]{0x0000002000000020UL});
-    public static readonly BitSet FOLLOW_37_in_formalParameterList5832 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_41_in_functionBody5844 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionBody5846 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_sourceElements_in_functionBody5849 = new BitSet(new ulong[]{0x0000040000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_functionBody5851 = new BitSet(new ulong[]{0x0000040000000020UL});
-    public static readonly BitSet FOLLOW_42_in_functionBody5854 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_program5866 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_sourceElements_in_program5869 = new BitSet(new ulong[]{0x0000000000000020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_program5871 = new BitSet(new ulong[]{0x0000000000000020UL});
-    public static readonly BitSet FOLLOW_EOF_in_program5874 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_sourceElement_in_sourceElements5885 = new BitSet(new ulong[]{0x007FD258003C1022UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_sourceElements5888 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_sourceElement_in_sourceElements5891 = new BitSet(new ulong[]{0x007FD258003C1022UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_statement_in_sourceElement5904 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_functionDeclaration_in_sourceElement5909 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_97_in_breakStatement5411 = new BitSet(new ulong[]{0x0000000000001020UL,0x0000000004000000UL});
+    public static readonly BitSet FOLLOW_Identifier_in_breakStatement5413 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000000004000000UL});
+    public static readonly BitSet FOLLOW_set_in_breakStatement5416 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_98_in_returnStatement5433 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080004000000UL});
+    public static readonly BitSet FOLLOW_expression_in_returnStatement5435 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000000004000000UL});
+    public static readonly BitSet FOLLOW_set_in_returnStatement5438 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_99_in_withStatement5456 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5458 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_36_in_withStatement5461 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5463 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
+    public static readonly BitSet FOLLOW_expression_in_withStatement5466 = new BitSet(new ulong[]{0x0000002000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5468 = new BitSet(new ulong[]{0x0000002000000020UL});
+    public static readonly BitSet FOLLOW_37_in_withStatement5471 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_withStatement5473 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_statement_in_withStatement5476 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_100_in_switchStatement5488 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5490 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_36_in_switchStatement5493 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5495 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
+    public static readonly BitSet FOLLOW_expression_in_switchStatement5498 = new BitSet(new ulong[]{0x0000002000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5500 = new BitSet(new ulong[]{0x0000002000000020UL});
+    public static readonly BitSet FOLLOW_37_in_switchStatement5503 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_switchStatement5505 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_caseBlock_in_switchStatement5508 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_41_in_caseBlock5520 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5523 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000002000000000UL});
+    public static readonly BitSet FOLLOW_caseClause_in_caseBlock5526 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5531 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000004000000000UL});
+    public static readonly BitSet FOLLOW_defaultClause_in_caseBlock5534 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5537 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_caseClause_in_caseBlock5540 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_caseBlock5546 = new BitSet(new ulong[]{0x0000040000000020UL});
+    public static readonly BitSet FOLLOW_42_in_caseBlock5549 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_101_in_caseClause5560 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_caseClause5562 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
+    public static readonly BitSet FOLLOW_expression_in_caseClause5565 = new BitSet(new ulong[]{0x0000080000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_caseClause5567 = new BitSet(new ulong[]{0x0000080000000020UL});
+    public static readonly BitSet FOLLOW_43_in_caseClause5570 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_caseClause5572 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_statementList_in_caseClause5575 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_102_in_defaultClause5588 = new BitSet(new ulong[]{0x0000080000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_defaultClause5590 = new BitSet(new ulong[]{0x0000080000000020UL});
+    public static readonly BitSet FOLLOW_43_in_defaultClause5593 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_defaultClause5595 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_statementList_in_defaultClause5598 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_Identifier_in_labelledStatement5611 = new BitSet(new ulong[]{0x0000080000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_labelledStatement5613 = new BitSet(new ulong[]{0x0000080000000020UL});
+    public static readonly BitSet FOLLOW_43_in_labelledStatement5616 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_labelledStatement5618 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_statement_in_labelledStatement5621 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_103_in_throwStatement5633 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
+    public static readonly BitSet FOLLOW_expression_in_throwStatement5635 = new BitSet(new ulong[]{0x0000000000000022UL,0x0000000004000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_throwStatement5638 = new BitSet(new ulong[]{0x0000000000000022UL});
+    public static readonly BitSet FOLLOW_90_in_throwStatement5643 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_104_in_tryStatement5655 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_tryStatement5657 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_blockStatement_in_tryStatement5660 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000060000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_tryStatement5662 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000060000000000UL});
+    public static readonly BitSet FOLLOW_finallyClause_in_tryStatement5666 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_catchClause_in_tryStatement5670 = new BitSet(new ulong[]{0x0000000000000022UL,0x0000040000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_tryStatement5673 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000040000000000UL});
+    public static readonly BitSet FOLLOW_finallyClause_in_tryStatement5676 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_105_in_catchClause5697 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5699 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_36_in_catchClause5702 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5704 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_catchClause5707 = new BitSet(new ulong[]{0x0000002000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5709 = new BitSet(new ulong[]{0x0000002000000020UL});
+    public static readonly BitSet FOLLOW_37_in_catchClause5712 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_catchClause5714 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_blockStatement_in_catchClause5717 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_106_in_finallyClause5729 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_finallyClause5731 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_blockStatement_in_finallyClause5734 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_107_in_functionDeclaration5749 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionDeclaration5751 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_functionDeclaration5754 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionDeclaration5756 = new BitSet(new ulong[]{0x0000001000000020UL});
+    public static readonly BitSet FOLLOW_formalParameterList_in_functionDeclaration5759 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionDeclaration5761 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_functionBody_in_functionDeclaration5764 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_107_in_functionExpression5776 = new BitSet(new ulong[]{0x0000001000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionExpression5778 = new BitSet(new ulong[]{0x0000001000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_functionExpression5781 = new BitSet(new ulong[]{0x0000001000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionExpression5784 = new BitSet(new ulong[]{0x0000001000001020UL});
+    public static readonly BitSet FOLLOW_formalParameterList_in_functionExpression5787 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionExpression5789 = new BitSet(new ulong[]{0x0000020000000020UL});
+    public static readonly BitSet FOLLOW_functionBody_in_functionExpression5792 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_36_in_formalParameterList5803 = new BitSet(new ulong[]{0x0000002000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5806 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_formalParameterList5809 = new BitSet(new ulong[]{0x000000A000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5812 = new BitSet(new ulong[]{0x0000008000000020UL});
+    public static readonly BitSet FOLLOW_39_in_formalParameterList5815 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5817 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_formalParameterList5820 = new BitSet(new ulong[]{0x000000A000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_formalParameterList5826 = new BitSet(new ulong[]{0x0000002000000020UL});
+    public static readonly BitSet FOLLOW_37_in_formalParameterList5829 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_41_in_functionBody5841 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionBody5843 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_sourceElements_in_functionBody5846 = new BitSet(new ulong[]{0x0000040000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_functionBody5848 = new BitSet(new ulong[]{0x0000040000000020UL});
+    public static readonly BitSet FOLLOW_42_in_functionBody5851 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_program5863 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_sourceElements_in_program5866 = new BitSet(new ulong[]{0x0000000000000020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_program5868 = new BitSet(new ulong[]{0x0000000000000020UL});
+    public static readonly BitSet FOLLOW_EOF_in_program5871 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_sourceElement_in_sourceElements5882 = new BitSet(new ulong[]{0x007FD258003C1022UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_sourceElements5885 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_sourceElement_in_sourceElements5888 = new BitSet(new ulong[]{0x007FD258003C1022UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_statement_in_sourceElement5901 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_functionDeclaration_in_sourceElement5906 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_LineTerminator_in_synpred11_AS33631 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_LineTerminator_in_synpred15_AS33644 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
     public static readonly BitSet FOLLOW_assignmentExpression_in_synpred15_AS33647 = new BitSet(new ulong[]{0x0000000000000002UL});
@@ -36830,34 +36833,34 @@ public partial class AS3Parser : Parser
     public static readonly BitSet FOLLOW_expression_in_synpred229_AS35267 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_LineTerminator_in_synpred232_AS35277 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000080000000000UL});
     public static readonly BitSet FOLLOW_expression_in_synpred232_AS35280 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred260_AS35526 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_caseClause_in_synpred260_AS35529 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred263_AS35540 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_caseClause_in_synpred263_AS35543 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred264_AS35534 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000004000000000UL});
-    public static readonly BitSet FOLLOW_defaultClause_in_synpred264_AS35537 = new BitSet(new ulong[]{0x0000040000000022UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred264_AS35540 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_caseClause_in_synpred264_AS35543 = new BitSet(new ulong[]{0x0000040000000022UL,0x0000006000000000UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred268_AS35575 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred271_AS35598 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred275_AS35641 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred276_AS35641 = new BitSet(new ulong[]{0x0000000000000022UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred281_AS35676 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000040000000000UL});
-    public static readonly BitSet FOLLOW_finallyClause_in_synpred281_AS35679 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred290_AS35781 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred297_AS35815 = new BitSet(new ulong[]{0x0000008000000020UL});
-    public static readonly BitSet FOLLOW_39_in_synpred297_AS35818 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred297_AS35820 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_synpred297_AS35823 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred298_AS35809 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_synpred298_AS35812 = new BitSet(new ulong[]{0x0000008000000022UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred298_AS35815 = new BitSet(new ulong[]{0x0000008000000020UL});
-    public static readonly BitSet FOLLOW_39_in_synpred298_AS35818 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred298_AS35820 = new BitSet(new ulong[]{0x0000000000001020UL});
-    public static readonly BitSet FOLLOW_Identifier_in_synpred298_AS35823 = new BitSet(new ulong[]{0x0000008000000022UL});
-    public static readonly BitSet FOLLOW_LineTerminator_in_synpred305_AS35888 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
-    public static readonly BitSet FOLLOW_sourceElement_in_synpred305_AS35891 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_statement_in_synpred306_AS35904 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred260_AS35523 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_caseClause_in_synpred260_AS35526 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred263_AS35537 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_caseClause_in_synpred263_AS35540 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred264_AS35531 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000004000000000UL});
+    public static readonly BitSet FOLLOW_defaultClause_in_synpred264_AS35534 = new BitSet(new ulong[]{0x0000040000000022UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred264_AS35537 = new BitSet(new ulong[]{0x0000040000000020UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_caseClause_in_synpred264_AS35540 = new BitSet(new ulong[]{0x0000040000000022UL,0x0000006000000000UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred268_AS35572 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred271_AS35595 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred275_AS35638 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred276_AS35638 = new BitSet(new ulong[]{0x0000000000000022UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred281_AS35673 = new BitSet(new ulong[]{0x0000000000000020UL,0x0000040000000000UL});
+    public static readonly BitSet FOLLOW_finallyClause_in_synpred281_AS35676 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred290_AS35778 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred297_AS35812 = new BitSet(new ulong[]{0x0000008000000020UL});
+    public static readonly BitSet FOLLOW_39_in_synpred297_AS35815 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred297_AS35817 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_synpred297_AS35820 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred298_AS35806 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_synpred298_AS35809 = new BitSet(new ulong[]{0x0000008000000022UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred298_AS35812 = new BitSet(new ulong[]{0x0000008000000020UL});
+    public static readonly BitSet FOLLOW_39_in_synpred298_AS35815 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred298_AS35817 = new BitSet(new ulong[]{0x0000000000001020UL});
+    public static readonly BitSet FOLLOW_Identifier_in_synpred298_AS35820 = new BitSet(new ulong[]{0x0000008000000022UL});
+    public static readonly BitSet FOLLOW_LineTerminator_in_synpred305_AS35885 = new BitSet(new ulong[]{0x007FD258003C1020UL,0x0000099FEE000000UL});
+    public static readonly BitSet FOLLOW_sourceElement_in_synpred305_AS35888 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_statement_in_synpred306_AS35901 = new BitSet(new ulong[]{0x0000000000000002UL});
 
 }
 }
