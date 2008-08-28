@@ -25,7 +25,6 @@ using System.Collections.Generic;
 using System.Text;
 using AS3V.CodeModel.Generic;
 using System.IO;
-using AS3V.CodeModel.Language.AS3.Parser;
 using AS3V.CodeModel.Generic.Parser;
 
 namespace AS3V.CodeModel.Language.AS3
@@ -36,7 +35,7 @@ namespace AS3V.CodeModel.Language.AS3
         private string _path;
         private AS3Package _package;
         private AS3Project _project;
-        private AS3Parser _parser;
+        private AS3Validator _file;
 
         public AS3CompilationUnit()
         {
@@ -44,7 +43,7 @@ namespace AS3V.CodeModel.Language.AS3
             _path = "";
             _package = null;
             _project = null;
-            _parser = new AS3Parser();
+            _file = new AS3Validator();
         }
 
         public void Build(AS3Project project, AS3Package package, string path)
@@ -82,11 +81,11 @@ namespace AS3V.CodeModel.Language.AS3
             get { return _path; }
         }
 
-        public IParser Parser
+        public IValidator Parser
         {
             get
             {
-                return _parser;
+                return _file;
             }
         }
 
@@ -95,7 +94,7 @@ namespace AS3V.CodeModel.Language.AS3
 #if DEBUG
             Console.WriteLine("\tParsing " + UnitPath);
 #endif
-            _parser.Start(this);
+            _file.Start(this);
         }
 
         #endregion

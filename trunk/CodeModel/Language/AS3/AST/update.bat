@@ -1,0 +1,1 @@
+java -cp E:\ANTLR\antlr-3.1.jar org.antlr.Tool -message-format vs2005 AS3.g

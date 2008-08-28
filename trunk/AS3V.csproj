@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39723, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Utility, Version=0.1.0.39726, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Antlr3.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -43,23 +51,37 @@
     <Compile Include="CodeModel\Generic\IPackage.cs" />
     <Compile Include="CodeModel\Generic\IPackageRoot.cs" />
     <Compile Include="CodeModel\Generic\IProject.cs" />
+    <Compile Include="CodeModel\Generic\Parser\Enumerators\NodeEnumerator.cs" />
     <Compile Include="CodeModel\Generic\Parser\Enumerators\ParserWarningEnumerator.cs" />
     <Compile Include="CodeModel\Generic\Parser\Enumerators\ParserErrorEnumerator.cs" />
-    <Compile Include="CodeModel\Generic\Parser\IParser.cs" />
+    <Compile Include="CodeModel\Generic\Parser\INode.cs" />
+    <Compile Include="CodeModel\Generic\Parser\IValidator.cs" />
     <Compile Include="CodeModel\Generic\Parser\ParserError.cs" />
     <Compile Include="CodeModel\Generic\Parser\ParserWarning.cs" />
     <Compile Include="CodeModel\Language\AS3\AS3CompilationUnit.cs" />
+    <Compile Include="CodeModel\Language\AS3\AS3Validator.cs" />
     <Compile Include="CodeModel\Language\AS3\AS3Package.cs" />
     <Compile Include="CodeModel\Language\AS3\AS3PackageRoot.cs" />
     <Compile Include="CodeModel\Language\AS3\AS3Project.cs" />
-    <Compile Include="CodeModel\Language\AS3\Parser\AS3Parser.cs" />
-    <Compile Include="CodeModel\Language\AS3\Parser\AS3Parser Parse.cs" />
+    <Compile Include="CodeModel\Language\AS3\AST\AS3Lexer.cs" />
+    <Compile Include="CodeModel\Language\AS3\AST\AS3Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CodeModel\Language\AS3\Parser\AST\Nodes\" />
+    <None Include="CodeModel\Language\AS3\AST\AS3.g" />
   </ItemGroup>
+  <!--ItemGroup>
+    <Antlr3 Include="CodeModel\Language\AS3\AST\ActionScript3.g">
+	  <OutputFiles>CodeModel\Language\AS3\AST\AS3Parser.cs;CodeModel\Language\AS3\AST\AS3Lexer.cs</OutputFiles>
+	</Antlr3>
+    <Target Name="Antlr3" Inputs="@(Antlr3)" Outputs="%(Antlr3.OutputFiles)">
+      <Exec Command="java -cp E:\ANTLR\antlr-3.1.jar org.antlr.Tool -message-format vs2005 @(Antlr3)" Outputs="%(Antlr3.OutputFiles)"/>
+    </Target>
+    <PropertyGroup>
+	  <BuildDependsOn>ANTLR;$(BuildDependsOn)</BuildDependsOn>
+    </PropertyGroup>
+  </ItemGroup-->
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

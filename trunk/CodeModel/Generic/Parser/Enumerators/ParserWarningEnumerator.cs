@@ -28,9 +28,9 @@ namespace AS3V.CodeModel.Generic.Parser.Enumerators
 {
     public class ParserWarningEnumerator : IEnumerable<ParserWarning>
     {
-        private IParser _owner;
+        private IValidator _owner;
 
-        public ParserWarningEnumerator(IParser owner)
+        public ParserWarningEnumerator(IValidator owner)
         {
             _owner = owner;
         }

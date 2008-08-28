@@ -33,7 +33,7 @@ namespace AS3V.CodeModel.Generic
         string UnitPath { get; }
         string FilePath { get; }
         
-        IParser Parser { get; }
+        IValidator Parser { get; }
 
         void Parse();
     }

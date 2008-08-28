@@ -24,48 +24,19 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AS3V.CodeModel.Generic.Parser.Enumerators
+namespace AS3V.CodeModel.Generic.Parser
 {
-    public class ParserErrorEnumerator : IEnumerable<ParserError>
+    public interface IValidator
     {
-        private IValidator _owner;
+        void Start(ICompilationUnit compilationUnit);
 
-        public ParserErrorEnumerator(IValidator owner)
-        {
-            _owner = owner;
-        }
+        int ErrorCount { get; }
+        int WarningCount { get; }
 
-        ~ParserErrorEnumerator()
-        {
-            _owner = null;
-        }
+        ParserError ErrorAt(int index);
+        ParserWarning WarningAt(int index);
 
-        #region IEnumerable<ParserError> Member
-
-        public IEnumerator<ParserError> GetEnumerator()
-        {
-            int n = _owner.ErrorCount;
-
-            for (int i = 0; i < n; ++i)
-            {
-                yield return _owner.ErrorAt(i);
-            }
-        }
-
-        #endregion
-
-        #region IEnumerable Member
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            int n = _owner.ErrorCount;
-
-            for (int i = 0; i < n; ++i)
-            {
-                yield return _owner.ErrorAt(i);
-            }
-        }
-
-        #endregion
+        IEnumerable<ParserError> ErrorEnumerator { get; }
+        IEnumerable<ParserWarning> WarningEnumerator { get; }
     }
 }

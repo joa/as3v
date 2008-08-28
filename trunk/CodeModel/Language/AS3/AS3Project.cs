@@ -151,6 +151,9 @@ namespace AS3V.CodeModel.Language.AS3
 
                 IPackage package = Package(packagePath);
 
+                if (null == package)
+                    return null;
+
                 return package.CompilationUnit(unitName);
             }
         }
