@@ -1,4 +1,4 @@
-// $ANTLR 3.1 AS3.g 2008-08-28 13:35:14
+// $ANTLR 3.1 AS3.g 2008-08-28 15:30:54
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
 // Unreachable code detected.
@@ -1918,7 +1918,7 @@ public partial class AS3Lexer : Lexer {
 
             	if ( state.backtracking == 0 ) 
             	{
-            	  _channel=HIDDEN;
+            	   Skip(); 
             	}
 
             }
@@ -2128,7 +2128,7 @@ public partial class AS3Lexer : Lexer {
 
             	if ( state.backtracking == 0 ) 
             	{
-            	  state.channel=HIDDEN;
+            	   Skip(); 
             	}
 
             }
@@ -2199,7 +2199,7 @@ public partial class AS3Lexer : Lexer {
 
             	if ( state.backtracking == 0 ) 
             	{
-            	  state.channel=HIDDEN;
+            	   Skip(); 
             	}
 
             }
@@ -2264,7 +2264,7 @@ public partial class AS3Lexer : Lexer {
 
             	if ( state.backtracking == 0 ) 
             	{
-            	  state.channel=HIDDEN;
+            	   Skip(); 
             	}
 
             }

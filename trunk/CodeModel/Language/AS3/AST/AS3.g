@@ -107,7 +107,7 @@ inputElementRegexp
 */
 
 WhiteSpace
-	: ('\t' | '\v' | '\f' | ' ' | '\u00A0') {$channel=HIDDEN;}
+	: ('\t' | '\v' | '\f' | ' ' | '\u00A0') { Skip(); }
 	;
 
 LineTerminator
@@ -124,15 +124,15 @@ Comment
 	;
 	fragment
 		MultiLineComment
-			: '/*' ~'*' (options {greedy=false;} : .)* '*/' {$channel=HIDDEN;}
+			: '/*' ~'*' (options {greedy=false;} : .)* '*/' { Skip(); }
 			;
 	fragment	
 		MultiLineDocumentation
-			: '/**' (options {greedy=false;} : .)* '*/' {$channel=HIDDEN;}
+			: '/**' (options {greedy=false;} : .)* '*/' { Skip(); }
 			;
 	fragment
 		SingleLineComment
-			: '//' ~(LineTerminator)* {$channel=HIDDEN;}
+			: '//' ~(LineTerminator)* { Skip(); }
 			;
 /*
 token
