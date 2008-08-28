@@ -9,6 +9,7 @@ using Antlr.Runtime;
 using AS3V.CodeModel.Exceptions;
 using AS3V.CodeModel.Generic.Parser.Enumerators;
 using Antlr.Runtime.Tree;
+using System.Collections;
 
 namespace AS3V.CodeModel.Language.AS3
 {
@@ -27,12 +28,18 @@ namespace AS3V.CodeModel.Language.AS3
         private void Validate(ICompilationUnit unit)
         {
             AS3Lexer lexer = new AS3Lexer(new ANTLRFileStream(unit.FilePath));
-            AS3Parser parser = new AS3Parser(new CommonTokenStream(lexer));
+            ITokenStream tokens = new CommonTokenStream(lexer);
+            AS3Parser parser = new AS3Parser(tokens);
             
             try
             {
                 AS3Parser.compilationUnit_return r = parser.compilationUnit();
-                Console.WriteLine(((ITree)r.Tree).ToStringTree());
+
+                CommonTree tree = ((CommonTree)r.Tree);
+                CommonTreeNodeStream nodes = new CommonTreeNodeStream(tree);
+                nodes.TokenStream = tokens;
+
+                Walk(((CommonTree)r.Tree).Children, 0);
             }
             catch (Exception exception)
             {
@@ -41,6 +48,35 @@ namespace AS3V.CodeModel.Language.AS3
 
                 return;
             }
+        }
+
+        private void Walk(IList children, int depth)
+        {
+            if (null == children || 0 == children.Count)
+                return;
+
+            int i = 0;
+            int n = children.Count;
+            int m = depth + 2;
+
+            for (i = 0; i < n; ++i)
+            {
+                CommonTree node = (CommonTree)children[i];
+
+                if (node.Type >= 0)
+                {
+                    for (int j =0; j < m; ++j)
+                    {
+                        Console.Write('\t');
+                    }
+
+                    Console.WriteLine("Type: {0}", AS3Parser.tokenNames[node.Type]);
+                }
+
+                Walk(node.Children, depth+1);
+            }
+
+            
         }
 
         private void AddError(string message, int lineIndex, int characterIndex)

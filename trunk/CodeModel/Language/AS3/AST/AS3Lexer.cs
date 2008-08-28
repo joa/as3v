@@ -1,4 +1,4 @@
-// $ANTLR 3.1 AS3.g 2008-08-28 11:14:06
+// $ANTLR 3.1 AS3.g 2008-08-28 11:50:41
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
 // Unreachable code detected.
@@ -1901,8 +1901,8 @@ public partial class AS3Lexer : Lexer {
     		{
             int _type = WhiteSpace;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // AS3.g:109:2: ( ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' ) )
-            // AS3.g:109:4: ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' )
+            // AS3.g:110:2: ( ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' ) )
+            // AS3.g:110:4: ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' )
             {
             	if ( input.LA(1) == '\t' || input.LA(1) == '\f' || input.LA(1) == ' ' || input.LA(1) == 'v' || input.LA(1) == '\u00A0' ) 
             	{
@@ -1939,7 +1939,7 @@ public partial class AS3Lexer : Lexer {
     		{
             int _type = LineTerminator;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // AS3.g:113:2: ( '\\r' | '\\n' | '\\u2028' | '\\u2029' )
+            // AS3.g:114:2: ( '\\r' | '\\n' | '\\u2028' | '\\u2029' )
             // AS3.g:
             {
             	if ( input.LA(1) == '\n' || input.LA(1) == '\r' || (input.LA(1) >= '\u2028' && input.LA(1) <= '\u2029') ) 
@@ -1973,7 +1973,7 @@ public partial class AS3Lexer : Lexer {
     		{
             int _type = Comment;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // AS3.g:120:2: ( MultiLineComment | MultiLineDocumentation | SingleLineComment )
+            // AS3.g:121:2: ( MultiLineComment | MultiLineDocumentation | SingleLineComment )
             int alt1 = 3;
             int LA1_0 = input.LA(1);
 
@@ -2026,21 +2026,21 @@ public partial class AS3Lexer : Lexer {
             switch (alt1) 
             {
                 case 1 :
-                    // AS3.g:120:4: MultiLineComment
+                    // AS3.g:121:4: MultiLineComment
                     {
                     	mMultiLineComment(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // AS3.g:121:4: MultiLineDocumentation
+                    // AS3.g:122:4: MultiLineDocumentation
                     {
                     	mMultiLineDocumentation(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // AS3.g:122:4: SingleLineComment
+                    // AS3.g:123:4: SingleLineComment
                     {
                     	mSingleLineComment(); if (state.failed) return ;
 
@@ -2062,8 +2062,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:126:4: ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' )
-            // AS3.g:126:6: '/*' ~ '*' ( options {greedy=false; } : . )* '*/'
+            // AS3.g:127:4: ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' )
+            // AS3.g:127:6: '/*' ~ '*' ( options {greedy=false; } : . )* '*/'
             {
             	Match("/*"); if (state.failed) return ;
 
@@ -2079,7 +2079,7 @@ public partial class AS3Lexer : Lexer {
             	    Recover(mse);
             	    throw mse;}
 
-            	// AS3.g:126:16: ( options {greedy=false; } : . )*
+            	// AS3.g:127:16: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt2 = 2;
@@ -2109,7 +2109,7 @@ public partial class AS3Lexer : Lexer {
             	    switch (alt2) 
             		{
             			case 1 :
-            			    // AS3.g:126:43: .
+            			    // AS3.g:127:43: .
             			    {
             			    	MatchAny(); if (state.failed) return ;
 
@@ -2145,12 +2145,12 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:130:4: ( '/**' ( options {greedy=false; } : . )* '*/' )
-            // AS3.g:130:6: '/**' ( options {greedy=false; } : . )* '*/'
+            // AS3.g:131:4: ( '/**' ( options {greedy=false; } : . )* '*/' )
+            // AS3.g:131:6: '/**' ( options {greedy=false; } : . )* '*/'
             {
             	Match("/**"); if (state.failed) return ;
 
-            	// AS3.g:130:12: ( options {greedy=false; } : . )*
+            	// AS3.g:131:12: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt3 = 2;
@@ -2180,7 +2180,7 @@ public partial class AS3Lexer : Lexer {
             	    switch (alt3) 
             		{
             			case 1 :
-            			    // AS3.g:130:39: .
+            			    // AS3.g:131:39: .
             			    {
             			    	MatchAny(); if (state.failed) return ;
 
@@ -2216,12 +2216,12 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:134:4: ( '//' (~ ( LineTerminator ) )* )
-            // AS3.g:134:6: '//' (~ ( LineTerminator ) )*
+            // AS3.g:135:4: ( '//' (~ ( LineTerminator ) )* )
+            // AS3.g:135:6: '//' (~ ( LineTerminator ) )*
             {
             	Match("//"); if (state.failed) return ;
 
-            	// AS3.g:134:11: (~ ( LineTerminator ) )*
+            	// AS3.g:135:11: (~ ( LineTerminator ) )*
             	do 
             	{
             	    int alt4 = 2;
@@ -2236,7 +2236,7 @@ public partial class AS3Lexer : Lexer {
             	    switch (alt4) 
             		{
             			case 1 :
-            			    // AS3.g:134:11: ~ ( LineTerminator )
+            			    // AS3.g:135:11: ~ ( LineTerminator )
             			    {
             			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '\u2027') || (input.LA(1) >= '\u202A' && input.LA(1) <= '\uFFFE') ) 
             			    	{
@@ -2264,7 +2264,7 @@ public partial class AS3Lexer : Lexer {
 
             	if ( state.backtracking == 0 ) 
             	{
-            	  state.channel=HIDDEN;
+                    state.channel = HIDDEN;
             	}
 
             }
@@ -2283,11 +2283,11 @@ public partial class AS3Lexer : Lexer {
     		{
             int _type = Identifier;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // AS3.g:213:2: ( IdentifierStart ( IdentifierPart )* )
-            // AS3.g:213:4: IdentifierStart ( IdentifierPart )*
+            // AS3.g:214:2: ( IdentifierStart ( IdentifierPart )* )
+            // AS3.g:214:4: IdentifierStart ( IdentifierPart )*
             {
             	mIdentifierStart(); if (state.failed) return ;
-            	// AS3.g:213:20: ( IdentifierPart )*
+            	// AS3.g:214:20: ( IdentifierPart )*
             	do 
             	{
             	    int alt5 = 2;
@@ -2302,7 +2302,7 @@ public partial class AS3Lexer : Lexer {
             	    switch (alt5) 
             		{
             			case 1 :
-            			    // AS3.g:213:20: IdentifierPart
+            			    // AS3.g:214:20: IdentifierPart
             			    {
             			    	mIdentifierPart(); if (state.failed) return ;
 
@@ -2334,7 +2334,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:217:4: ( UnicodeLetter | '$' | '_' | '\\\\' UnicodeEscapeSequence )
+            // AS3.g:218:4: ( UnicodeLetter | '$' | '_' | '\\\\' UnicodeEscapeSequence )
             int alt6 = 4;
             int LA6_0 = input.LA(1);
 
@@ -2365,28 +2365,28 @@ public partial class AS3Lexer : Lexer {
             switch (alt6) 
             {
                 case 1 :
-                    // AS3.g:217:6: UnicodeLetter
+                    // AS3.g:218:6: UnicodeLetter
                     {
                     	mUnicodeLetter(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // AS3.g:218:6: '$'
+                    // AS3.g:219:6: '$'
                     {
                     	Match('$'); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // AS3.g:219:6: '_'
+                    // AS3.g:220:6: '_'
                     {
                     	Match('_'); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // AS3.g:220:6: '\\\\' UnicodeEscapeSequence
+                    // AS3.g:221:6: '\\\\' UnicodeEscapeSequence
                     {
                     	Match('\\'); if (state.failed) return ;
                     	mUnicodeEscapeSequence(); if (state.failed) return ;
@@ -2407,7 +2407,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:224:4: ( ( IdentifierStart )=> IdentifierStart | UnicodeDigit | UnicodeConnectorPunctuation )
+            // AS3.g:225:4: ( ( IdentifierStart )=> IdentifierStart | UnicodeDigit | UnicodeConnectorPunctuation )
             int alt7 = 3;
             int LA7_0 = input.LA(1);
 
@@ -2463,21 +2463,21 @@ public partial class AS3Lexer : Lexer {
             switch (alt7) 
             {
                 case 1 :
-                    // AS3.g:224:6: ( IdentifierStart )=> IdentifierStart
+                    // AS3.g:225:6: ( IdentifierStart )=> IdentifierStart
                     {
                     	mIdentifierStart(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // AS3.g:225:6: UnicodeDigit
+                    // AS3.g:226:6: UnicodeDigit
                     {
                     	mUnicodeDigit(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // AS3.g:226:6: UnicodeConnectorPunctuation
+                    // AS3.g:227:6: UnicodeConnectorPunctuation
                     {
                     	mUnicodeConnectorPunctuation(); if (state.failed) return ;
 
@@ -2497,7 +2497,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:230:2: ( '\\u0041' .. '\\u005A' | '\\u0061' .. '\\u007A' | '\\u00AA' | '\\u00B5' | '\\u00BA' | '\\u00C0' .. '\\u00D6' | '\\u00D8' .. '\\u00F6' | '\\u00F8' .. '\\u021F' | '\\u0222' .. '\\u0233' | '\\u0250' .. '\\u02AD' | '\\u02B0' .. '\\u02B8' | '\\u02BB' .. '\\u02C1' | '\\u02D0' .. '\\u02D1' | '\\u02E0' .. '\\u02E4' | '\\u02EE' | '\\u037A' | '\\u0386' | '\\u0388' .. '\\u038A' | '\\u038C' | '\\u038E' .. '\\u03A1' | '\\u03A3' .. '\\u03CE' | '\\u03D0' .. '\\u03D7' | '\\u03DA' .. '\\u03F3' | '\\u0400' .. '\\u0481' | '\\u048C' .. '\\u04C4' | '\\u04C7' .. '\\u04C8' | '\\u04CB' .. '\\u04CC' | '\\u04D0' .. '\\u04F5' | '\\u04F8' .. '\\u04F9' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05D0' .. '\\u05EA' | '\\u05F0' .. '\\u05F2' | '\\u0621' .. '\\u063A' | '\\u0640' .. '\\u064A' | '\\u0671' .. '\\u06D3' | '\\u06D5' | '\\u06E5' .. '\\u06E6' | '\\u06FA' .. '\\u06FC' | '\\u0710' | '\\u0712' .. '\\u072C' | '\\u0780' .. '\\u07A5' | '\\u0905' .. '\\u0939' | '\\u093D' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u0985' .. '\\u098C' | '\\u098F' .. '\\u0990' | '\\u0993' .. '\\u09A8' | '\\u09AA' .. '\\u09B0' | '\\u09B2' | '\\u09B6' .. '\\u09B9' | '\\u09DC' .. '\\u09DD' | '\\u09DF' .. '\\u09E1' | '\\u09F0' .. '\\u09F1' | '\\u0A05' .. '\\u0A0A' | '\\u0A0F' .. '\\u0A10' | '\\u0A13' .. '\\u0A28' | '\\u0A2A' .. '\\u0A30' | '\\u0A32' .. '\\u0A33' | '\\u0A35' .. '\\u0A36' | '\\u0A38' .. '\\u0A39' | '\\u0A59' .. '\\u0A5C' | '\\u0A5E' | '\\u0A72' .. '\\u0A74' | '\\u0A85' .. '\\u0A8B' | '\\u0A8D' | '\\u0A8F' .. '\\u0A91' | '\\u0A93' .. '\\u0AA8' | '\\u0AAA' .. '\\u0AB0' | '\\u0AB2' .. '\\u0AB3' | '\\u0AB5' .. '\\u0AB9' | '\\u0ABD' | '\\u0AD0' | '\\u0AE0' | '\\u0B05' .. '\\u0B0C' | '\\u0B0F' .. '\\u0B10' | '\\u0B13' .. '\\u0B28' | '\\u0B2A' .. '\\u0B30' | '\\u0B32' .. '\\u0B33' | '\\u0B36' .. '\\u0B39' | '\\u0B3D' | '\\u0B5C' .. '\\u0B5D' | '\\u0B5F' .. '\\u0B61' | '\\u0B85' .. '\\u0B8A' | '\\u0B8E' .. '\\u0B90' | '\\u0B92' .. '\\u0B95' | '\\u0B99' .. '\\u0B9A' | '\\u0B9C' | '\\u0B9E' .. '\\u0B9F' | '\\u0BA3' .. '\\u0BA4' | '\\u0BA8' .. '\\u0BAA' | '\\u0BAE' .. '\\u0BB5' | '\\u0BB7' .. '\\u0BB9' | '\\u0C05' .. '\\u0C0C' | '\\u0C0E' .. '\\u0C10' | '\\u0C12' .. '\\u0C28' | '\\u0C2A' .. '\\u0C33' | '\\u0C35' .. '\\u0C39' | '\\u0C60' .. '\\u0C61' | '\\u0C85' .. '\\u0C8C' | '\\u0C8E' .. '\\u0C90' | '\\u0C92' .. '\\u0CA8' | '\\u0CAA' .. '\\u0CB3' | '\\u0CB5' .. '\\u0CB9' | '\\u0CDE' | '\\u0CE0' .. '\\u0CE1' | '\\u0D05' .. '\\u0D0C' | '\\u0D0E' .. '\\u0D10' | '\\u0D12' .. '\\u0D28' | '\\u0D2A' .. '\\u0D39' | '\\u0D60' .. '\\u0D61' | '\\u0D85' .. '\\u0D96' | '\\u0D9A' .. '\\u0DB1' | '\\u0DB3' .. '\\u0DBB' | '\\u0DBD' | '\\u0DC0' .. '\\u0DC6' | '\\u0E01' .. '\\u0E30' | '\\u0E32' .. '\\u0E33' | '\\u0E40' .. '\\u0E46' | '\\u0E81' .. '\\u0E82' | '\\u0E84' | '\\u0E87' .. '\\u0E88' | '\\u0E8A' | '\\u0E8D' | '\\u0E94' .. '\\u0E97' | '\\u0E99' .. '\\u0E9F' | '\\u0EA1' .. '\\u0EA3' | '\\u0EA5' | '\\u0EA7' | '\\u0EAA' .. '\\u0EAB' | '\\u0EAD' .. '\\u0EB0' | '\\u0EB2' .. '\\u0EB3' | '\\u0EBD' .. '\\u0EC4' | '\\u0EC6' | '\\u0EDC' .. '\\u0EDD' | '\\u0F00' | '\\u0F40' .. '\\u0F6A' | '\\u0F88' .. '\\u0F8B' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102A' | '\\u1050' .. '\\u1055' | '\\u10A0' .. '\\u10C5' | '\\u10D0' .. '\\u10F6' | '\\u1100' .. '\\u1159' | '\\u115F' .. '\\u11A2' | '\\u11A8' .. '\\u11F9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124A' .. '\\u124D' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125A' .. '\\u125D' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128A' .. '\\u128D' | '\\u1290' .. '\\u12AE' | '\\u12B0' | '\\u12B2' .. '\\u12B5' | '\\u12B8' .. '\\u12BE' | '\\u12C0' | '\\u12C2' .. '\\u12C5' | '\\u12C8' .. '\\u12CE' | '\\u12D0' .. '\\u12D6' | '\\u12D8' .. '\\u12EE' | '\\u12F0' .. '\\u130E' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131E' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135A' | '\\u13A0' .. '\\u13B0' | '\\u13B1' .. '\\u13F4' | '\\u1401' .. '\\u1676' | '\\u1681' .. '\\u169A' | '\\u16A0' .. '\\u16EA' | '\\u1780' .. '\\u17B3' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18A8' | '\\u1E00' .. '\\u1E9B' | '\\u1EA0' .. '\\u1EE0' | '\\u1EE1' .. '\\u1EF9' | '\\u1F00' .. '\\u1F15' | '\\u1F18' .. '\\u1F1D' | '\\u1F20' .. '\\u1F39' | '\\u1F3A' .. '\\u1F45' | '\\u1F48' .. '\\u1F4D' | '\\u1F50' .. '\\u1F57' | '\\u1F59' | '\\u1F5B' | '\\u1F5D' | '\\u1F5F' .. '\\u1F7D' | '\\u1F80' .. '\\u1FB4' | '\\u1FB6' .. '\\u1FBC' | '\\u1FBE' | '\\u1FC2' .. '\\u1FC4' | '\\u1FC6' .. '\\u1FCC' | '\\u1FD0' .. '\\u1FD3' | '\\u1FD6' .. '\\u1FDB' | '\\u1FE0' .. '\\u1FEC' | '\\u1FF2' .. '\\u1FF4' | '\\u1FF6' .. '\\u1FFC' | '\\u207F' | '\\u2102' | '\\u2107' | '\\u210A' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211D' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212A' .. '\\u212D' | '\\u212F' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303A' | '\\u3041' .. '\\u3094' | '\\u309D' .. '\\u309E' | '\\u30A1' .. '\\u30FA' | '\\u30FC' .. '\\u30FE' | '\\u3105' .. '\\u312C' | '\\u3131' .. '\\u318E' | '\\u31A0' .. '\\u31B7' | '\\u3400' | '\\u4DB5' | '\\u4E00' | '\\u9FA5' | '\\uA000' .. '\\uA48C' | '\\uAC00' | '\\uD7A3' | '\\uF900' .. '\\uFA2D' | '\\uFB00' .. '\\uFB06' | '\\uFB13' .. '\\uFB17' | '\\uFB1D' | '\\uFB1F' .. '\\uFB28' | '\\uFB2A' .. '\\uFB36' | '\\uFB38' .. '\\uFB3C' | '\\uFB3E' | '\\uFB40' .. '\\uFB41' | '\\uFB43' .. '\\uFB44' | '\\uFB46' .. '\\uFBB1' | '\\uFBD3' .. '\\uFD3D' | '\\uFD50' .. '\\uFD8F' | '\\uFD92' .. '\\uFDC7' | '\\uFDF0' .. '\\uFDFB' | '\\uFE70' .. '\\uFE72' | '\\uFE74' | '\\uFE76' .. '\\uFEFC' | '\\uFF21' .. '\\uFF3A' | '\\uFF41' .. '\\uFF5A' | '\\uFF66' .. '\\uFFBE' | '\\uFFC2' .. '\\uFFC7' | '\\uFFCA' .. '\\uFFCF' | '\\uFFD2' .. '\\uFFD7' | '\\uFFDA' .. '\\uFFDC' )
+            // AS3.g:231:2: ( '\\u0041' .. '\\u005A' | '\\u0061' .. '\\u007A' | '\\u00AA' | '\\u00B5' | '\\u00BA' | '\\u00C0' .. '\\u00D6' | '\\u00D8' .. '\\u00F6' | '\\u00F8' .. '\\u021F' | '\\u0222' .. '\\u0233' | '\\u0250' .. '\\u02AD' | '\\u02B0' .. '\\u02B8' | '\\u02BB' .. '\\u02C1' | '\\u02D0' .. '\\u02D1' | '\\u02E0' .. '\\u02E4' | '\\u02EE' | '\\u037A' | '\\u0386' | '\\u0388' .. '\\u038A' | '\\u038C' | '\\u038E' .. '\\u03A1' | '\\u03A3' .. '\\u03CE' | '\\u03D0' .. '\\u03D7' | '\\u03DA' .. '\\u03F3' | '\\u0400' .. '\\u0481' | '\\u048C' .. '\\u04C4' | '\\u04C7' .. '\\u04C8' | '\\u04CB' .. '\\u04CC' | '\\u04D0' .. '\\u04F5' | '\\u04F8' .. '\\u04F9' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05D0' .. '\\u05EA' | '\\u05F0' .. '\\u05F2' | '\\u0621' .. '\\u063A' | '\\u0640' .. '\\u064A' | '\\u0671' .. '\\u06D3' | '\\u06D5' | '\\u06E5' .. '\\u06E6' | '\\u06FA' .. '\\u06FC' | '\\u0710' | '\\u0712' .. '\\u072C' | '\\u0780' .. '\\u07A5' | '\\u0905' .. '\\u0939' | '\\u093D' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u0985' .. '\\u098C' | '\\u098F' .. '\\u0990' | '\\u0993' .. '\\u09A8' | '\\u09AA' .. '\\u09B0' | '\\u09B2' | '\\u09B6' .. '\\u09B9' | '\\u09DC' .. '\\u09DD' | '\\u09DF' .. '\\u09E1' | '\\u09F0' .. '\\u09F1' | '\\u0A05' .. '\\u0A0A' | '\\u0A0F' .. '\\u0A10' | '\\u0A13' .. '\\u0A28' | '\\u0A2A' .. '\\u0A30' | '\\u0A32' .. '\\u0A33' | '\\u0A35' .. '\\u0A36' | '\\u0A38' .. '\\u0A39' | '\\u0A59' .. '\\u0A5C' | '\\u0A5E' | '\\u0A72' .. '\\u0A74' | '\\u0A85' .. '\\u0A8B' | '\\u0A8D' | '\\u0A8F' .. '\\u0A91' | '\\u0A93' .. '\\u0AA8' | '\\u0AAA' .. '\\u0AB0' | '\\u0AB2' .. '\\u0AB3' | '\\u0AB5' .. '\\u0AB9' | '\\u0ABD' | '\\u0AD0' | '\\u0AE0' | '\\u0B05' .. '\\u0B0C' | '\\u0B0F' .. '\\u0B10' | '\\u0B13' .. '\\u0B28' | '\\u0B2A' .. '\\u0B30' | '\\u0B32' .. '\\u0B33' | '\\u0B36' .. '\\u0B39' | '\\u0B3D' | '\\u0B5C' .. '\\u0B5D' | '\\u0B5F' .. '\\u0B61' | '\\u0B85' .. '\\u0B8A' | '\\u0B8E' .. '\\u0B90' | '\\u0B92' .. '\\u0B95' | '\\u0B99' .. '\\u0B9A' | '\\u0B9C' | '\\u0B9E' .. '\\u0B9F' | '\\u0BA3' .. '\\u0BA4' | '\\u0BA8' .. '\\u0BAA' | '\\u0BAE' .. '\\u0BB5' | '\\u0BB7' .. '\\u0BB9' | '\\u0C05' .. '\\u0C0C' | '\\u0C0E' .. '\\u0C10' | '\\u0C12' .. '\\u0C28' | '\\u0C2A' .. '\\u0C33' | '\\u0C35' .. '\\u0C39' | '\\u0C60' .. '\\u0C61' | '\\u0C85' .. '\\u0C8C' | '\\u0C8E' .. '\\u0C90' | '\\u0C92' .. '\\u0CA8' | '\\u0CAA' .. '\\u0CB3' | '\\u0CB5' .. '\\u0CB9' | '\\u0CDE' | '\\u0CE0' .. '\\u0CE1' | '\\u0D05' .. '\\u0D0C' | '\\u0D0E' .. '\\u0D10' | '\\u0D12' .. '\\u0D28' | '\\u0D2A' .. '\\u0D39' | '\\u0D60' .. '\\u0D61' | '\\u0D85' .. '\\u0D96' | '\\u0D9A' .. '\\u0DB1' | '\\u0DB3' .. '\\u0DBB' | '\\u0DBD' | '\\u0DC0' .. '\\u0DC6' | '\\u0E01' .. '\\u0E30' | '\\u0E32' .. '\\u0E33' | '\\u0E40' .. '\\u0E46' | '\\u0E81' .. '\\u0E82' | '\\u0E84' | '\\u0E87' .. '\\u0E88' | '\\u0E8A' | '\\u0E8D' | '\\u0E94' .. '\\u0E97' | '\\u0E99' .. '\\u0E9F' | '\\u0EA1' .. '\\u0EA3' | '\\u0EA5' | '\\u0EA7' | '\\u0EAA' .. '\\u0EAB' | '\\u0EAD' .. '\\u0EB0' | '\\u0EB2' .. '\\u0EB3' | '\\u0EBD' .. '\\u0EC4' | '\\u0EC6' | '\\u0EDC' .. '\\u0EDD' | '\\u0F00' | '\\u0F40' .. '\\u0F6A' | '\\u0F88' .. '\\u0F8B' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102A' | '\\u1050' .. '\\u1055' | '\\u10A0' .. '\\u10C5' | '\\u10D0' .. '\\u10F6' | '\\u1100' .. '\\u1159' | '\\u115F' .. '\\u11A2' | '\\u11A8' .. '\\u11F9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124A' .. '\\u124D' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125A' .. '\\u125D' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128A' .. '\\u128D' | '\\u1290' .. '\\u12AE' | '\\u12B0' | '\\u12B2' .. '\\u12B5' | '\\u12B8' .. '\\u12BE' | '\\u12C0' | '\\u12C2' .. '\\u12C5' | '\\u12C8' .. '\\u12CE' | '\\u12D0' .. '\\u12D6' | '\\u12D8' .. '\\u12EE' | '\\u12F0' .. '\\u130E' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131E' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135A' | '\\u13A0' .. '\\u13B0' | '\\u13B1' .. '\\u13F4' | '\\u1401' .. '\\u1676' | '\\u1681' .. '\\u169A' | '\\u16A0' .. '\\u16EA' | '\\u1780' .. '\\u17B3' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18A8' | '\\u1E00' .. '\\u1E9B' | '\\u1EA0' .. '\\u1EE0' | '\\u1EE1' .. '\\u1EF9' | '\\u1F00' .. '\\u1F15' | '\\u1F18' .. '\\u1F1D' | '\\u1F20' .. '\\u1F39' | '\\u1F3A' .. '\\u1F45' | '\\u1F48' .. '\\u1F4D' | '\\u1F50' .. '\\u1F57' | '\\u1F59' | '\\u1F5B' | '\\u1F5D' | '\\u1F5F' .. '\\u1F7D' | '\\u1F80' .. '\\u1FB4' | '\\u1FB6' .. '\\u1FBC' | '\\u1FBE' | '\\u1FC2' .. '\\u1FC4' | '\\u1FC6' .. '\\u1FCC' | '\\u1FD0' .. '\\u1FD3' | '\\u1FD6' .. '\\u1FDB' | '\\u1FE0' .. '\\u1FEC' | '\\u1FF2' .. '\\u1FF4' | '\\u1FF6' .. '\\u1FFC' | '\\u207F' | '\\u2102' | '\\u2107' | '\\u210A' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211D' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212A' .. '\\u212D' | '\\u212F' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303A' | '\\u3041' .. '\\u3094' | '\\u309D' .. '\\u309E' | '\\u30A1' .. '\\u30FA' | '\\u30FC' .. '\\u30FE' | '\\u3105' .. '\\u312C' | '\\u3131' .. '\\u318E' | '\\u31A0' .. '\\u31B7' | '\\u3400' | '\\u4DB5' | '\\u4E00' | '\\u9FA5' | '\\uA000' .. '\\uA48C' | '\\uAC00' | '\\uD7A3' | '\\uF900' .. '\\uFA2D' | '\\uFB00' .. '\\uFB06' | '\\uFB13' .. '\\uFB17' | '\\uFB1D' | '\\uFB1F' .. '\\uFB28' | '\\uFB2A' .. '\\uFB36' | '\\uFB38' .. '\\uFB3C' | '\\uFB3E' | '\\uFB40' .. '\\uFB41' | '\\uFB43' .. '\\uFB44' | '\\uFB46' .. '\\uFBB1' | '\\uFBD3' .. '\\uFD3D' | '\\uFD50' .. '\\uFD8F' | '\\uFD92' .. '\\uFDC7' | '\\uFDF0' .. '\\uFDFB' | '\\uFE70' .. '\\uFE72' | '\\uFE74' | '\\uFE76' .. '\\uFEFC' | '\\uFF21' .. '\\uFF3A' | '\\uFF41' .. '\\uFF5A' | '\\uFF66' .. '\\uFFBE' | '\\uFFC2' .. '\\uFFC7' | '\\uFFCA' .. '\\uFFCF' | '\\uFFD2' .. '\\uFFD7' | '\\uFFDA' .. '\\uFFDC' )
             // AS3.g:
             {
             	if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || (input.LA(1) >= 'a' && input.LA(1) <= 'z') || input.LA(1) == '\u00AA' || input.LA(1) == '\u00B5' || input.LA(1) == '\u00BA' || (input.LA(1) >= '\u00C0' && input.LA(1) <= '\u00D6') || (input.LA(1) >= '\u00D8' && input.LA(1) <= '\u00F6') || (input.LA(1) >= '\u00F8' && input.LA(1) <= '\u021F') || (input.LA(1) >= '\u0222' && input.LA(1) <= '\u0233') || (input.LA(1) >= '\u0250' && input.LA(1) <= '\u02AD') || (input.LA(1) >= '\u02B0' && input.LA(1) <= '\u02B8') || (input.LA(1) >= '\u02BB' && input.LA(1) <= '\u02C1') || (input.LA(1) >= '\u02D0' && input.LA(1) <= '\u02D1') || (input.LA(1) >= '\u02E0' && input.LA(1) <= '\u02E4') || input.LA(1) == '\u02EE' || input.LA(1) == '\u037A' || input.LA(1) == '\u0386' || (input.LA(1) >= '\u0388' && input.LA(1) <= '\u038A') || input.LA(1) == '\u038C' || (input.LA(1) >= '\u038E' && input.LA(1) <= '\u03A1') || (input.LA(1) >= '\u03A3' && input.LA(1) <= '\u03CE') || (input.LA(1) >= '\u03D0' && input.LA(1) <= '\u03D7') || (input.LA(1) >= '\u03DA' && input.LA(1) <= '\u03F3') || (input.LA(1) >= '\u0400' && input.LA(1) <= '\u0481') || (input.LA(1) >= '\u048C' && input.LA(1) <= '\u04C4') || (input.LA(1) >= '\u04C7' && input.LA(1) <= '\u04C8') || (input.LA(1) >= '\u04CB' && input.LA(1) <= '\u04CC') || (input.LA(1) >= '\u04D0' && input.LA(1) <= '\u04F5') || (input.LA(1) >= '\u04F8' && input.LA(1) <= '\u04F9') || (input.LA(1) >= '\u0531' && input.LA(1) <= '\u0556') || input.LA(1) == '\u0559' || (input.LA(1) >= '\u0561' && input.LA(1) <= '\u0587') || (input.LA(1) >= '\u05D0' && input.LA(1) <= '\u05EA') || (input.LA(1) >= '\u05F0' && input.LA(1) <= '\u05F2') || (input.LA(1) >= '\u0621' && input.LA(1) <= '\u063A') || (input.LA(1) >= '\u0640' && input.LA(1) <= '\u064A') || (input.LA(1) >= '\u0671' && input.LA(1) <= '\u06D3') || input.LA(1) == '\u06D5' || (input.LA(1) >= '\u06E5' && input.LA(1) <= '\u06E6') || (input.LA(1) >= '\u06FA' && input.LA(1) <= '\u06FC') || input.LA(1) == '\u0710' || (input.LA(1) >= '\u0712' && input.LA(1) <= '\u072C') || (input.LA(1) >= '\u0780' && input.LA(1) <= '\u07A5') || (input.LA(1) >= '\u0905' && input.LA(1) <= '\u0939') || input.LA(1) == '\u093D' || input.LA(1) == '\u0950' || (input.LA(1) >= '\u0958' && input.LA(1) <= '\u0961') || (input.LA(1) >= '\u0985' && input.LA(1) <= '\u098C') || (input.LA(1) >= '\u098F' && input.LA(1) <= '\u0990') || (input.LA(1) >= '\u0993' && input.LA(1) <= '\u09A8') || (input.LA(1) >= '\u09AA' && input.LA(1) <= '\u09B0') || input.LA(1) == '\u09B2' || (input.LA(1) >= '\u09B6' && input.LA(1) <= '\u09B9') || (input.LA(1) >= '\u09DC' && input.LA(1) <= '\u09DD') || (input.LA(1) >= '\u09DF' && input.LA(1) <= '\u09E1') || (input.LA(1) >= '\u09F0' && input.LA(1) <= '\u09F1') || (input.LA(1) >= '\u0A05' && input.LA(1) <= '\u0A0A') || (input.LA(1) >= '\u0A0F' && input.LA(1) <= '\u0A10') || (input.LA(1) >= '\u0A13' && input.LA(1) <= '\u0A28') || (input.LA(1) >= '\u0A2A' && input.LA(1) <= '\u0A30') || (input.LA(1) >= '\u0A32' && input.LA(1) <= '\u0A33') || (input.LA(1) >= '\u0A35' && input.LA(1) <= '\u0A36') || (input.LA(1) >= '\u0A38' && input.LA(1) <= '\u0A39') || (input.LA(1) >= '\u0A59' && input.LA(1) <= '\u0A5C') || input.LA(1) == '\u0A5E' || (input.LA(1) >= '\u0A72' && input.LA(1) <= '\u0A74') || (input.LA(1) >= '\u0A85' && input.LA(1) <= '\u0A8B') || input.LA(1) == '\u0A8D' || (input.LA(1) >= '\u0A8F' && input.LA(1) <= '\u0A91') || (input.LA(1) >= '\u0A93' && input.LA(1) <= '\u0AA8') || (input.LA(1) >= '\u0AAA' && input.LA(1) <= '\u0AB0') || (input.LA(1) >= '\u0AB2' && input.LA(1) <= '\u0AB3') || (input.LA(1) >= '\u0AB5' && input.LA(1) <= '\u0AB9') || input.LA(1) == '\u0ABD' || input.LA(1) == '\u0AD0' || input.LA(1) == '\u0AE0' || (input.LA(1) >= '\u0B05' && input.LA(1) <= '\u0B0C') || (input.LA(1) >= '\u0B0F' && input.LA(1) <= '\u0B10') || (input.LA(1) >= '\u0B13' && input.LA(1) <= '\u0B28') || (input.LA(1) >= '\u0B2A' && input.LA(1) <= '\u0B30') || (input.LA(1) >= '\u0B32' && input.LA(1) <= '\u0B33') || (input.LA(1) >= '\u0B36' && input.LA(1) <= '\u0B39') || input.LA(1) == '\u0B3D' || (input.LA(1) >= '\u0B5C' && input.LA(1) <= '\u0B5D') || (input.LA(1) >= '\u0B5F' && input.LA(1) <= '\u0B61') || (input.LA(1) >= '\u0B85' && input.LA(1) <= '\u0B8A') || (input.LA(1) >= '\u0B8E' && input.LA(1) <= '\u0B90') || (input.LA(1) >= '\u0B92' && input.LA(1) <= '\u0B95') || (input.LA(1) >= '\u0B99' && input.LA(1) <= '\u0B9A') || input.LA(1) == '\u0B9C' || (input.LA(1) >= '\u0B9E' && input.LA(1) <= '\u0B9F') || (input.LA(1) >= '\u0BA3' && input.LA(1) <= '\u0BA4') || (input.LA(1) >= '\u0BA8' && input.LA(1) <= '\u0BAA') || (input.LA(1) >= '\u0BAE' && input.LA(1) <= '\u0BB5') || (input.LA(1) >= '\u0BB7' && input.LA(1) <= '\u0BB9') || (input.LA(1) >= '\u0C05' && input.LA(1) <= '\u0C0C') || (input.LA(1) >= '\u0C0E' && input.LA(1) <= '\u0C10') || (input.LA(1) >= '\u0C12' && input.LA(1) <= '\u0C28') || (input.LA(1) >= '\u0C2A' && input.LA(1) <= '\u0C33') || (input.LA(1) >= '\u0C35' && input.LA(1) <= '\u0C39') || (input.LA(1) >= '\u0C60' && input.LA(1) <= '\u0C61') || (input.LA(1) >= '\u0C85' && input.LA(1) <= '\u0C8C') || (input.LA(1) >= '\u0C8E' && input.LA(1) <= '\u0C90') || (input.LA(1) >= '\u0C92' && input.LA(1) <= '\u0CA8') || (input.LA(1) >= '\u0CAA' && input.LA(1) <= '\u0CB3') || (input.LA(1) >= '\u0CB5' && input.LA(1) <= '\u0CB9') || input.LA(1) == '\u0CDE' || (input.LA(1) >= '\u0CE0' && input.LA(1) <= '\u0CE1') || (input.LA(1) >= '\u0D05' && input.LA(1) <= '\u0D0C') || (input.LA(1) >= '\u0D0E' && input.LA(1) <= '\u0D10') || (input.LA(1) >= '\u0D12' && input.LA(1) <= '\u0D28') || (input.LA(1) >= '\u0D2A' && input.LA(1) <= '\u0D39') || (input.LA(1) >= '\u0D60' && input.LA(1) <= '\u0D61') || (input.LA(1) >= '\u0D85' && input.LA(1) <= '\u0D96') || (input.LA(1) >= '\u0D9A' && input.LA(1) <= '\u0DB1') || (input.LA(1) >= '\u0DB3' && input.LA(1) <= '\u0DBB') || input.LA(1) == '\u0DBD' || (input.LA(1) >= '\u0DC0' && input.LA(1) <= '\u0DC6') || (input.LA(1) >= '\u0E01' && input.LA(1) <= '\u0E30') || (input.LA(1) >= '\u0E32' && input.LA(1) <= '\u0E33') || (input.LA(1) >= '\u0E40' && input.LA(1) <= '\u0E46') || (input.LA(1) >= '\u0E81' && input.LA(1) <= '\u0E82') || input.LA(1) == '\u0E84' || (input.LA(1) >= '\u0E87' && input.LA(1) <= '\u0E88') || input.LA(1) == '\u0E8A' || input.LA(1) == '\u0E8D' || (input.LA(1) >= '\u0E94' && input.LA(1) <= '\u0E97') || (input.LA(1) >= '\u0E99' && input.LA(1) <= '\u0E9F') || (input.LA(1) >= '\u0EA1' && input.LA(1) <= '\u0EA3') || input.LA(1) == '\u0EA5' || input.LA(1) == '\u0EA7' || (input.LA(1) >= '\u0EAA' && input.LA(1) <= '\u0EAB') || (input.LA(1) >= '\u0EAD' && input.LA(1) <= '\u0EB0') || (input.LA(1) >= '\u0EB2' && input.LA(1) <= '\u0EB3') || (input.LA(1) >= '\u0EBD' && input.LA(1) <= '\u0EC4') || input.LA(1) == '\u0EC6' || (input.LA(1) >= '\u0EDC' && input.LA(1) <= '\u0EDD') || input.LA(1) == '\u0F00' || (input.LA(1) >= '\u0F40' && input.LA(1) <= '\u0F6A') || (input.LA(1) >= '\u0F88' && input.LA(1) <= '\u0F8B') || (input.LA(1) >= '\u1000' && input.LA(1) <= '\u1021') || (input.LA(1) >= '\u1023' && input.LA(1) <= '\u1027') || (input.LA(1) >= '\u1029' && input.LA(1) <= '\u102A') || (input.LA(1) >= '\u1050' && input.LA(1) <= '\u1055') || (input.LA(1) >= '\u10A0' && input.LA(1) <= '\u10C5') || (input.LA(1) >= '\u10D0' && input.LA(1) <= '\u10F6') || (input.LA(1) >= '\u1100' && input.LA(1) <= '\u1159') || (input.LA(1) >= '\u115F' && input.LA(1) <= '\u11A2') || (input.LA(1) >= '\u11A8' && input.LA(1) <= '\u11F9') || (input.LA(1) >= '\u1200' && input.LA(1) <= '\u1206') || (input.LA(1) >= '\u1208' && input.LA(1) <= '\u1246') || input.LA(1) == '\u1248' || (input.LA(1) >= '\u124A' && input.LA(1) <= '\u124D') || (input.LA(1) >= '\u1250' && input.LA(1) <= '\u1256') || input.LA(1) == '\u1258' || (input.LA(1) >= '\u125A' && input.LA(1) <= '\u125D') || (input.LA(1) >= '\u1260' && input.LA(1) <= '\u1286') || input.LA(1) == '\u1288' || (input.LA(1) >= '\u128A' && input.LA(1) <= '\u128D') || (input.LA(1) >= '\u1290' && input.LA(1) <= '\u12AE') || input.LA(1) == '\u12B0' || (input.LA(1) >= '\u12B2' && input.LA(1) <= '\u12B5') || (input.LA(1) >= '\u12B8' && input.LA(1) <= '\u12BE') || input.LA(1) == '\u12C0' || (input.LA(1) >= '\u12C2' && input.LA(1) <= '\u12C5') || (input.LA(1) >= '\u12C8' && input.LA(1) <= '\u12CE') || (input.LA(1) >= '\u12D0' && input.LA(1) <= '\u12D6') || (input.LA(1) >= '\u12D8' && input.LA(1) <= '\u12EE') || (input.LA(1) >= '\u12F0' && input.LA(1) <= '\u130E') || input.LA(1) == '\u1310' || (input.LA(1) >= '\u1312' && input.LA(1) <= '\u1315') || (input.LA(1) >= '\u1318' && input.LA(1) <= '\u131E') || (input.LA(1) >= '\u1320' && input.LA(1) <= '\u1346') || (input.LA(1) >= '\u1348' && input.LA(1) <= '\u135A') || (input.LA(1) >= '\u13A0' && input.LA(1) <= '\u13F4') || (input.LA(1) >= '\u1401' && input.LA(1) <= '\u1676') || (input.LA(1) >= '\u1681' && input.LA(1) <= '\u169A') || (input.LA(1) >= '\u16A0' && input.LA(1) <= '\u16EA') || (input.LA(1) >= '\u1780' && input.LA(1) <= '\u17B3') || (input.LA(1) >= '\u1820' && input.LA(1) <= '\u1877') || (input.LA(1) >= '\u1880' && input.LA(1) <= '\u18A8') || (input.LA(1) >= '\u1E00' && input.LA(1) <= '\u1E9B') || (input.LA(1) >= '\u1EA0' && input.LA(1) <= '\u1EF9') || (input.LA(1) >= '\u1F00' && input.LA(1) <= '\u1F15') || (input.LA(1) >= '\u1F18' && input.LA(1) <= '\u1F1D') || (input.LA(1) >= '\u1F20' && input.LA(1) <= '\u1F45') || (input.LA(1) >= '\u1F48' && input.LA(1) <= '\u1F4D') || (input.LA(1) >= '\u1F50' && input.LA(1) <= '\u1F57') || input.LA(1) == '\u1F59' || input.LA(1) == '\u1F5B' || input.LA(1) == '\u1F5D' || (input.LA(1) >= '\u1F5F' && input.LA(1) <= '\u1F7D') || (input.LA(1) >= '\u1F80' && input.LA(1) <= '\u1FB4') || (input.LA(1) >= '\u1FB6' && input.LA(1) <= '\u1FBC') || input.LA(1) == '\u1FBE' || (input.LA(1) >= '\u1FC2' && input.LA(1) <= '\u1FC4') || (input.LA(1) >= '\u1FC6' && input.LA(1) <= '\u1FCC') || (input.LA(1) >= '\u1FD0' && input.LA(1) <= '\u1FD3') || (input.LA(1) >= '\u1FD6' && input.LA(1) <= '\u1FDB') || (input.LA(1) >= '\u1FE0' && input.LA(1) <= '\u1FEC') || (input.LA(1) >= '\u1FF2' && input.LA(1) <= '\u1FF4') || (input.LA(1) >= '\u1FF6' && input.LA(1) <= '\u1FFC') || input.LA(1) == '\u207F' || input.LA(1) == '\u2102' || input.LA(1) == '\u2107' || (input.LA(1) >= '\u210A' && input.LA(1) <= '\u2113') || input.LA(1) == '\u2115' || (input.LA(1) >= '\u2119' && input.LA(1) <= '\u211D') || input.LA(1) == '\u2124' || input.LA(1) == '\u2126' || input.LA(1) == '\u2128' || (input.LA(1) >= '\u212A' && input.LA(1) <= '\u212D') || (input.LA(1) >= '\u212F' && input.LA(1) <= '\u2131') || (input.LA(1) >= '\u2133' && input.LA(1) <= '\u2139') || (input.LA(1) >= '\u2160' && input.LA(1) <= '\u2183') || (input.LA(1) >= '\u3005' && input.LA(1) <= '\u3007') || (input.LA(1) >= '\u3021' && input.LA(1) <= '\u3029') || (input.LA(1) >= '\u3031' && input.LA(1) <= '\u3035') || (input.LA(1) >= '\u3038' && input.LA(1) <= '\u303A') || (input.LA(1) >= '\u3041' && input.LA(1) <= '\u3094') || (input.LA(1) >= '\u309D' && input.LA(1) <= '\u309E') || (input.LA(1) >= '\u30A1' && input.LA(1) <= '\u30FA') || (input.LA(1) >= '\u30FC' && input.LA(1) <= '\u30FE') || (input.LA(1) >= '\u3105' && input.LA(1) <= '\u312C') || (input.LA(1) >= '\u3131' && input.LA(1) <= '\u318E') || (input.LA(1) >= '\u31A0' && input.LA(1) <= '\u31B7') || input.LA(1) == '\u3400' || input.LA(1) == '\u4DB5' || input.LA(1) == '\u4E00' || input.LA(1) == '\u9FA5' || (input.LA(1) >= '\uA000' && input.LA(1) <= '\uA48C') || input.LA(1) == '\uAC00' || input.LA(1) == '\uD7A3' || (input.LA(1) >= '\uF900' && input.LA(1) <= '\uFA2D') || (input.LA(1) >= '\uFB00' && input.LA(1) <= '\uFB06') || (input.LA(1) >= '\uFB13' && input.LA(1) <= '\uFB17') || input.LA(1) == '\uFB1D' || (input.LA(1) >= '\uFB1F' && input.LA(1) <= '\uFB28') || (input.LA(1) >= '\uFB2A' && input.LA(1) <= '\uFB36') || (input.LA(1) >= '\uFB38' && input.LA(1) <= '\uFB3C') || input.LA(1) == '\uFB3E' || (input.LA(1) >= '\uFB40' && input.LA(1) <= '\uFB41') || (input.LA(1) >= '\uFB43' && input.LA(1) <= '\uFB44') || (input.LA(1) >= '\uFB46' && input.LA(1) <= '\uFBB1') || (input.LA(1) >= '\uFBD3' && input.LA(1) <= '\uFD3D') || (input.LA(1) >= '\uFD50' && input.LA(1) <= '\uFD8F') || (input.LA(1) >= '\uFD92' && input.LA(1) <= '\uFDC7') || (input.LA(1) >= '\uFDF0' && input.LA(1) <= '\uFDFB') || (input.LA(1) >= '\uFE70' && input.LA(1) <= '\uFE72') || input.LA(1) == '\uFE74' || (input.LA(1) >= '\uFE76' && input.LA(1) <= '\uFEFC') || (input.LA(1) >= '\uFF21' && input.LA(1) <= '\uFF3A') || (input.LA(1) >= '\uFF41' && input.LA(1) <= '\uFF5A') || (input.LA(1) >= '\uFF66' && input.LA(1) <= '\uFFBE') || (input.LA(1) >= '\uFFC2' && input.LA(1) <= '\uFFC7') || (input.LA(1) >= '\uFFCA' && input.LA(1) <= '\uFFCF') || (input.LA(1) >= '\uFFD2' && input.LA(1) <= '\uFFD7') || (input.LA(1) >= '\uFFDA' && input.LA(1) <= '\uFFDC') ) 
@@ -2527,7 +2527,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:494:2: ( '\\u0300' .. '\\u034E' | '\\u0360' .. '\\u0362' | '\\u0483' .. '\\u0486' | '\\u0591' .. '\\u05A1' | '\\u05A3' .. '\\u05B9' | '\\u05BB' .. '\\u05BD' | '\\u05BF' | '\\u05C1' .. '\\u05C2' | '\\u05C4' | '\\u064B' .. '\\u0655' | '\\u0670' | '\\u06D6' .. '\\u06DC' | '\\u06DF' .. '\\u06E4' | '\\u06E7' .. '\\u06E8' | '\\u06EA' .. '\\u06ED' | '\\u0711' | '\\u0730' .. '\\u074A' | '\\u07A6' .. '\\u07B0' | '\\u0901' .. '\\u0903' | '\\u093C' | '\\u093E' .. '\\u094D' | '\\u0951' .. '\\u0954' | '\\u0962' .. '\\u0963' | '\\u0981' .. '\\u0983' | '\\u09BC' .. '\\u09C4' | '\\u09C7' .. '\\u09C8' | '\\u09CB' .. '\\u09CD' | '\\u09D7' | '\\u09E2' .. '\\u09E3' | '\\u0A02' | '\\u0A3C' | '\\u0A3E' .. '\\u0A42' | '\\u0A47' .. '\\u0A48' | '\\u0A4B' .. '\\u0A4D' | '\\u0A70' .. '\\u0A71' | '\\u0A81' .. '\\u0A83' | '\\u0ABC' | '\\u0ABE' .. '\\u0AC5' | '\\u0AC7' .. '\\u0AC9' | '\\u0ACB' .. '\\u0ACD' | '\\u0B01' .. '\\u0B03' | '\\u0B3C' | '\\u0B3E' .. '\\u0B43' | '\\u0B47' .. '\\u0B48' | '\\u0B4B' .. '\\u0B4D' | '\\u0B56' .. '\\u0B57' | '\\u0B82' .. '\\u0B83' | '\\u0BBE' .. '\\u0BC2' | '\\u0BC6' .. '\\u0BC8' | '\\u0BCA' .. '\\u0BCD' | '\\u0BD7' | '\\u0C01' .. '\\u0C03' | '\\u0C3E' .. '\\u0C44' | '\\u0C46' .. '\\u0C48' | '\\u0C4A' .. '\\u0C4D' | '\\u0C55' .. '\\u0C56' | '\\u0C82' .. '\\u0C83' | '\\u0CBE' .. '\\u0CC4' | '\\u0CC6' .. '\\u0CC8' | '\\u0CCA' .. '\\u0CCD' | '\\u0CD5' .. '\\u0CD6' | '\\u0D02' .. '\\u0D03' | '\\u0D3E' .. '\\u0D43' | '\\u0D46' .. '\\u0D48' | '\\u0D4A' .. '\\u0D4D' | '\\u0D57' | '\\u0D82' .. '\\u0D83' | '\\u0DCA' | '\\u0DCF' .. '\\u0DD4' | '\\u0DD6' | '\\u0DD8' .. '\\u0DDF' | '\\u0DF2' .. '\\u0DF3' | '\\u0E31' | '\\u0E34' .. '\\u0E3A' | '\\u0E47' .. '\\u0E4E' | '\\u0EB1' | '\\u0EB4' .. '\\u0EB9' | '\\u0EBB' .. '\\u0EBC' | '\\u0EC8' .. '\\u0ECD' | '\\u0F18' .. '\\u0F19' | '\\u0F35' | '\\u0F37' | '\\u0F39' | '\\u0F3E' .. '\\u0F3F' | '\\u0F71' .. '\\u0F84' | '\\u0F86' .. '\\u0F87' | '\\u0F90' .. '\\u0F97' | '\\u0F99' .. '\\u0FBC' | '\\u0FC6' | '\\u102C' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1056' .. '\\u1059' | '\\u17B4' .. '\\u17D3' | '\\u18A9' | '\\u20D0' .. '\\u20DC' | '\\u20E1' | '\\u302A' .. '\\u302F' | '\\u3099' .. '\\u309A' | '\\uFB1E' | '\\uFE20' .. '\\uFE23' )
+            // AS3.g:495:2: ( '\\u0300' .. '\\u034E' | '\\u0360' .. '\\u0362' | '\\u0483' .. '\\u0486' | '\\u0591' .. '\\u05A1' | '\\u05A3' .. '\\u05B9' | '\\u05BB' .. '\\u05BD' | '\\u05BF' | '\\u05C1' .. '\\u05C2' | '\\u05C4' | '\\u064B' .. '\\u0655' | '\\u0670' | '\\u06D6' .. '\\u06DC' | '\\u06DF' .. '\\u06E4' | '\\u06E7' .. '\\u06E8' | '\\u06EA' .. '\\u06ED' | '\\u0711' | '\\u0730' .. '\\u074A' | '\\u07A6' .. '\\u07B0' | '\\u0901' .. '\\u0903' | '\\u093C' | '\\u093E' .. '\\u094D' | '\\u0951' .. '\\u0954' | '\\u0962' .. '\\u0963' | '\\u0981' .. '\\u0983' | '\\u09BC' .. '\\u09C4' | '\\u09C7' .. '\\u09C8' | '\\u09CB' .. '\\u09CD' | '\\u09D7' | '\\u09E2' .. '\\u09E3' | '\\u0A02' | '\\u0A3C' | '\\u0A3E' .. '\\u0A42' | '\\u0A47' .. '\\u0A48' | '\\u0A4B' .. '\\u0A4D' | '\\u0A70' .. '\\u0A71' | '\\u0A81' .. '\\u0A83' | '\\u0ABC' | '\\u0ABE' .. '\\u0AC5' | '\\u0AC7' .. '\\u0AC9' | '\\u0ACB' .. '\\u0ACD' | '\\u0B01' .. '\\u0B03' | '\\u0B3C' | '\\u0B3E' .. '\\u0B43' | '\\u0B47' .. '\\u0B48' | '\\u0B4B' .. '\\u0B4D' | '\\u0B56' .. '\\u0B57' | '\\u0B82' .. '\\u0B83' | '\\u0BBE' .. '\\u0BC2' | '\\u0BC6' .. '\\u0BC8' | '\\u0BCA' .. '\\u0BCD' | '\\u0BD7' | '\\u0C01' .. '\\u0C03' | '\\u0C3E' .. '\\u0C44' | '\\u0C46' .. '\\u0C48' | '\\u0C4A' .. '\\u0C4D' | '\\u0C55' .. '\\u0C56' | '\\u0C82' .. '\\u0C83' | '\\u0CBE' .. '\\u0CC4' | '\\u0CC6' .. '\\u0CC8' | '\\u0CCA' .. '\\u0CCD' | '\\u0CD5' .. '\\u0CD6' | '\\u0D02' .. '\\u0D03' | '\\u0D3E' .. '\\u0D43' | '\\u0D46' .. '\\u0D48' | '\\u0D4A' .. '\\u0D4D' | '\\u0D57' | '\\u0D82' .. '\\u0D83' | '\\u0DCA' | '\\u0DCF' .. '\\u0DD4' | '\\u0DD6' | '\\u0DD8' .. '\\u0DDF' | '\\u0DF2' .. '\\u0DF3' | '\\u0E31' | '\\u0E34' .. '\\u0E3A' | '\\u0E47' .. '\\u0E4E' | '\\u0EB1' | '\\u0EB4' .. '\\u0EB9' | '\\u0EBB' .. '\\u0EBC' | '\\u0EC8' .. '\\u0ECD' | '\\u0F18' .. '\\u0F19' | '\\u0F35' | '\\u0F37' | '\\u0F39' | '\\u0F3E' .. '\\u0F3F' | '\\u0F71' .. '\\u0F84' | '\\u0F86' .. '\\u0F87' | '\\u0F90' .. '\\u0F97' | '\\u0F99' .. '\\u0FBC' | '\\u0FC6' | '\\u102C' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1056' .. '\\u1059' | '\\u17B4' .. '\\u17D3' | '\\u18A9' | '\\u20D0' .. '\\u20DC' | '\\u20E1' | '\\u302A' .. '\\u302F' | '\\u3099' .. '\\u309A' | '\\uFB1E' | '\\uFE20' .. '\\uFE23' )
             // AS3.g:
             {
             	if ( (input.LA(1) >= '\u0300' && input.LA(1) <= '\u034E') || (input.LA(1) >= '\u0360' && input.LA(1) <= '\u0362') || (input.LA(1) >= '\u0483' && input.LA(1) <= '\u0486') || (input.LA(1) >= '\u0591' && input.LA(1) <= '\u05A1') || (input.LA(1) >= '\u05A3' && input.LA(1) <= '\u05B9') || (input.LA(1) >= '\u05BB' && input.LA(1) <= '\u05BD') || input.LA(1) == '\u05BF' || (input.LA(1) >= '\u05C1' && input.LA(1) <= '\u05C2') || input.LA(1) == '\u05C4' || (input.LA(1) >= '\u064B' && input.LA(1) <= '\u0655') || input.LA(1) == '\u0670' || (input.LA(1) >= '\u06D6' && input.LA(1) <= '\u06DC') || (input.LA(1) >= '\u06DF' && input.LA(1) <= '\u06E4') || (input.LA(1) >= '\u06E7' && input.LA(1) <= '\u06E8') || (input.LA(1) >= '\u06EA' && input.LA(1) <= '\u06ED') || input.LA(1) == '\u0711' || (input.LA(1) >= '\u0730' && input.LA(1) <= '\u074A') || (input.LA(1) >= '\u07A6' && input.LA(1) <= '\u07B0') || (input.LA(1) >= '\u0901' && input.LA(1) <= '\u0903') || input.LA(1) == '\u093C' || (input.LA(1) >= '\u093E' && input.LA(1) <= '\u094D') || (input.LA(1) >= '\u0951' && input.LA(1) <= '\u0954') || (input.LA(1) >= '\u0962' && input.LA(1) <= '\u0963') || (input.LA(1) >= '\u0981' && input.LA(1) <= '\u0983') || (input.LA(1) >= '\u09BC' && input.LA(1) <= '\u09C4') || (input.LA(1) >= '\u09C7' && input.LA(1) <= '\u09C8') || (input.LA(1) >= '\u09CB' && input.LA(1) <= '\u09CD') || input.LA(1) == '\u09D7' || (input.LA(1) >= '\u09E2' && input.LA(1) <= '\u09E3') || input.LA(1) == '\u0A02' || input.LA(1) == '\u0A3C' || (input.LA(1) >= '\u0A3E' && input.LA(1) <= '\u0A42') || (input.LA(1) >= '\u0A47' && input.LA(1) <= '\u0A48') || (input.LA(1) >= '\u0A4B' && input.LA(1) <= '\u0A4D') || (input.LA(1) >= '\u0A70' && input.LA(1) <= '\u0A71') || (input.LA(1) >= '\u0A81' && input.LA(1) <= '\u0A83') || input.LA(1) == '\u0ABC' || (input.LA(1) >= '\u0ABE' && input.LA(1) <= '\u0AC5') || (input.LA(1) >= '\u0AC7' && input.LA(1) <= '\u0AC9') || (input.LA(1) >= '\u0ACB' && input.LA(1) <= '\u0ACD') || (input.LA(1) >= '\u0B01' && input.LA(1) <= '\u0B03') || input.LA(1) == '\u0B3C' || (input.LA(1) >= '\u0B3E' && input.LA(1) <= '\u0B43') || (input.LA(1) >= '\u0B47' && input.LA(1) <= '\u0B48') || (input.LA(1) >= '\u0B4B' && input.LA(1) <= '\u0B4D') || (input.LA(1) >= '\u0B56' && input.LA(1) <= '\u0B57') || (input.LA(1) >= '\u0B82' && input.LA(1) <= '\u0B83') || (input.LA(1) >= '\u0BBE' && input.LA(1) <= '\u0BC2') || (input.LA(1) >= '\u0BC6' && input.LA(1) <= '\u0BC8') || (input.LA(1) >= '\u0BCA' && input.LA(1) <= '\u0BCD') || input.LA(1) == '\u0BD7' || (input.LA(1) >= '\u0C01' && input.LA(1) <= '\u0C03') || (input.LA(1) >= '\u0C3E' && input.LA(1) <= '\u0C44') || (input.LA(1) >= '\u0C46' && input.LA(1) <= '\u0C48') || (input.LA(1) >= '\u0C4A' && input.LA(1) <= '\u0C4D') || (input.LA(1) >= '\u0C55' && input.LA(1) <= '\u0C56') || (input.LA(1) >= '\u0C82' && input.LA(1) <= '\u0C83') || (input.LA(1) >= '\u0CBE' && input.LA(1) <= '\u0CC4') || (input.LA(1) >= '\u0CC6' && input.LA(1) <= '\u0CC8') || (input.LA(1) >= '\u0CCA' && input.LA(1) <= '\u0CCD') || (input.LA(1) >= '\u0CD5' && input.LA(1) <= '\u0CD6') || (input.LA(1) >= '\u0D02' && input.LA(1) <= '\u0D03') || (input.LA(1) >= '\u0D3E' && input.LA(1) <= '\u0D43') || (input.LA(1) >= '\u0D46' && input.LA(1) <= '\u0D48') || (input.LA(1) >= '\u0D4A' && input.LA(1) <= '\u0D4D') || input.LA(1) == '\u0D57' || (input.LA(1) >= '\u0D82' && input.LA(1) <= '\u0D83') || input.LA(1) == '\u0DCA' || (input.LA(1) >= '\u0DCF' && input.LA(1) <= '\u0DD4') || input.LA(1) == '\u0DD6' || (input.LA(1) >= '\u0DD8' && input.LA(1) <= '\u0DDF') || (input.LA(1) >= '\u0DF2' && input.LA(1) <= '\u0DF3') || input.LA(1) == '\u0E31' || (input.LA(1) >= '\u0E34' && input.LA(1) <= '\u0E3A') || (input.LA(1) >= '\u0E47' && input.LA(1) <= '\u0E4E') || input.LA(1) == '\u0EB1' || (input.LA(1) >= '\u0EB4' && input.LA(1) <= '\u0EB9') || (input.LA(1) >= '\u0EBB' && input.LA(1) <= '\u0EBC') || (input.LA(1) >= '\u0EC8' && input.LA(1) <= '\u0ECD') || (input.LA(1) >= '\u0F18' && input.LA(1) <= '\u0F19') || input.LA(1) == '\u0F35' || input.LA(1) == '\u0F37' || input.LA(1) == '\u0F39' || (input.LA(1) >= '\u0F3E' && input.LA(1) <= '\u0F3F') || (input.LA(1) >= '\u0F71' && input.LA(1) <= '\u0F84') || (input.LA(1) >= '\u0F86' && input.LA(1) <= '\u0F87') || (input.LA(1) >= '\u0F90' && input.LA(1) <= '\u0F97') || (input.LA(1) >= '\u0F99' && input.LA(1) <= '\u0FBC') || input.LA(1) == '\u0FC6' || (input.LA(1) >= '\u102C' && input.LA(1) <= '\u1032') || (input.LA(1) >= '\u1036' && input.LA(1) <= '\u1039') || (input.LA(1) >= '\u1056' && input.LA(1) <= '\u1059') || (input.LA(1) >= '\u17B4' && input.LA(1) <= '\u17D3') || input.LA(1) == '\u18A9' || (input.LA(1) >= '\u20D0' && input.LA(1) <= '\u20DC') || input.LA(1) == '\u20E1' || (input.LA(1) >= '\u302A' && input.LA(1) <= '\u302F') || (input.LA(1) >= '\u3099' && input.LA(1) <= '\u309A') || input.LA(1) == '\uFB1E' || (input.LA(1) >= '\uFE20' && input.LA(1) <= '\uFE23') ) 
@@ -2557,7 +2557,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:597:2: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06F0' .. '\\u06F9' | '\\u0966' .. '\\u096F' | '\\u09E6' .. '\\u09EF' | '\\u0A66' .. '\\u0A6F' | '\\u0AE6' .. '\\u0AEF' | '\\u0B66' .. '\\u0B6F' | '\\u0BE7' .. '\\u0BEF' | '\\u0C66' .. '\\u0C6F' | '\\u0CE6' .. '\\u0CEF' | '\\u0D66' .. '\\u0D6F' | '\\u0E50' .. '\\u0E59' | '\\u0ED0' .. '\\u0ED9' | '\\u0F20' .. '\\u0F29' | '\\u1040' .. '\\u1049' | '\\u1369' .. '\\u1371' | '\\u17E0' .. '\\u17E9' | '\\u1810' .. '\\u1819' | '\\uFF10' .. '\\uFF19' )
+            // AS3.g:598:2: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06F0' .. '\\u06F9' | '\\u0966' .. '\\u096F' | '\\u09E6' .. '\\u09EF' | '\\u0A66' .. '\\u0A6F' | '\\u0AE6' .. '\\u0AEF' | '\\u0B66' .. '\\u0B6F' | '\\u0BE7' .. '\\u0BEF' | '\\u0C66' .. '\\u0C6F' | '\\u0CE6' .. '\\u0CEF' | '\\u0D66' .. '\\u0D6F' | '\\u0E50' .. '\\u0E59' | '\\u0ED0' .. '\\u0ED9' | '\\u0F20' .. '\\u0F29' | '\\u1040' .. '\\u1049' | '\\u1369' .. '\\u1371' | '\\u17E0' .. '\\u17E9' | '\\u1810' .. '\\u1819' | '\\uFF10' .. '\\uFF19' )
             // AS3.g:
             {
             	if ( (input.LA(1) >= '0' && input.LA(1) <= '9') || (input.LA(1) >= '\u0660' && input.LA(1) <= '\u0669') || (input.LA(1) >= '\u06F0' && input.LA(1) <= '\u06F9') || (input.LA(1) >= '\u0966' && input.LA(1) <= '\u096F') || (input.LA(1) >= '\u09E6' && input.LA(1) <= '\u09EF') || (input.LA(1) >= '\u0A66' && input.LA(1) <= '\u0A6F') || (input.LA(1) >= '\u0AE6' && input.LA(1) <= '\u0AEF') || (input.LA(1) >= '\u0B66' && input.LA(1) <= '\u0B6F') || (input.LA(1) >= '\u0BE7' && input.LA(1) <= '\u0BEF') || (input.LA(1) >= '\u0C66' && input.LA(1) <= '\u0C6F') || (input.LA(1) >= '\u0CE6' && input.LA(1) <= '\u0CEF') || (input.LA(1) >= '\u0D66' && input.LA(1) <= '\u0D6F') || (input.LA(1) >= '\u0E50' && input.LA(1) <= '\u0E59') || (input.LA(1) >= '\u0ED0' && input.LA(1) <= '\u0ED9') || (input.LA(1) >= '\u0F20' && input.LA(1) <= '\u0F29') || (input.LA(1) >= '\u1040' && input.LA(1) <= '\u1049') || (input.LA(1) >= '\u1369' && input.LA(1) <= '\u1371') || (input.LA(1) >= '\u17E0' && input.LA(1) <= '\u17E9') || (input.LA(1) >= '\u1810' && input.LA(1) <= '\u1819') || (input.LA(1) >= '\uFF10' && input.LA(1) <= '\uFF19') ) 
@@ -2587,7 +2587,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:620:2: ( '\\u005F' | '\\u203F' .. '\\u2040' | '\\u30FB' | '\\uFE33' .. '\\uFE34' | '\\uFE4D' .. '\\uFE4F' | '\\uFF3F' | '\\uFF65' )
+            // AS3.g:621:2: ( '\\u005F' | '\\u203F' .. '\\u2040' | '\\u30FB' | '\\uFE33' .. '\\uFE34' | '\\uFE4D' .. '\\uFE4F' | '\\uFF3F' | '\\uFF65' )
             // AS3.g:
             {
             	if ( input.LA(1) == '_' || (input.LA(1) >= '\u203F' && input.LA(1) <= '\u2040') || input.LA(1) == '\u30FB' || (input.LA(1) >= '\uFE33' && input.LA(1) <= '\uFE34') || (input.LA(1) >= '\uFE4D' && input.LA(1) <= '\uFE4F') || input.LA(1) == '\uFF3F' || input.LA(1) == '\uFF65' ) 
@@ -2617,8 +2617,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:649:3: ( 'null' )
-            // AS3.g:649:5: 'null'
+            // AS3.g:650:3: ( 'null' )
+            // AS3.g:650:5: 'null'
             {
             	Match("null"); if (state.failed) return ;
 
@@ -2637,7 +2637,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:654:3: ( 'true' | 'false' )
+            // AS3.g:655:3: ( 'true' | 'false' )
             int alt8 = 2;
             int LA8_0 = input.LA(1);
 
@@ -2660,7 +2660,7 @@ public partial class AS3Lexer : Lexer {
             switch (alt8) 
             {
                 case 1 :
-                    // AS3.g:654:5: 'true'
+                    // AS3.g:655:5: 'true'
                     {
                     	Match("true"); if (state.failed) return ;
 
@@ -2668,7 +2668,7 @@ public partial class AS3Lexer : Lexer {
                     }
                     break;
                 case 2 :
-                    // AS3.g:655:5: 'false'
+                    // AS3.g:656:5: 'false'
                     {
                     	Match("false"); if (state.failed) return ;
 
@@ -2691,7 +2691,7 @@ public partial class AS3Lexer : Lexer {
     		{
             int _type = NumericLiteral;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // AS3.g:659:2: ( DecimalLiteral | HexIntegerLiteral )
+            // AS3.g:660:2: ( DecimalLiteral | HexIntegerLiteral )
             int alt9 = 2;
             int LA9_0 = input.LA(1);
 
@@ -2722,14 +2722,14 @@ public partial class AS3Lexer : Lexer {
             switch (alt9) 
             {
                 case 1 :
-                    // AS3.g:659:4: DecimalLiteral
+                    // AS3.g:660:4: DecimalLiteral
                     {
                     	mDecimalLiteral(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // AS3.g:660:4: HexIntegerLiteral
+                    // AS3.g:661:4: HexIntegerLiteral
                     {
                     	mHexIntegerLiteral(); if (state.failed) return ;
 
@@ -2751,8 +2751,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:664:4: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
-            // AS3.g:664:6: '0' ( 'x' | 'X' ) ( HexDigit )+
+            // AS3.g:665:4: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
+            // AS3.g:665:6: '0' ( 'x' | 'X' ) ( HexDigit )+
             {
             	Match('0'); if (state.failed) return ;
             	if ( input.LA(1) == 'X' || input.LA(1) == 'x' ) 
@@ -2767,7 +2767,7 @@ public partial class AS3Lexer : Lexer {
             	    Recover(mse);
             	    throw mse;}
 
-            	// AS3.g:664:22: ( HexDigit )+
+            	// AS3.g:665:22: ( HexDigit )+
             	int cnt10 = 0;
             	do 
             	{
@@ -2783,7 +2783,7 @@ public partial class AS3Lexer : Lexer {
             	    switch (alt10) 
             		{
             			case 1 :
-            			    // AS3.g:664:22: HexDigit
+            			    // AS3.g:665:22: HexDigit
             			    {
             			    	mHexDigit(); if (state.failed) return ;
 
@@ -2818,15 +2818,15 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:668:4: ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? )
+            // AS3.g:669:4: ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? )
             int alt17 = 2;
             alt17 = dfa17.Predict(input);
             switch (alt17) 
             {
                 case 1 :
-                    // AS3.g:668:6: ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )?
+                    // AS3.g:669:6: ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )?
                     {
-                    	// AS3.g:668:6: ( DecimalDigit )+
+                    	// AS3.g:669:6: ( DecimalDigit )+
                     	int cnt11 = 0;
                     	do 
                     	{
@@ -2842,7 +2842,7 @@ public partial class AS3Lexer : Lexer {
                     	    switch (alt11) 
                     		{
                     			case 1 :
-                    			    // AS3.g:668:6: DecimalDigit
+                    			    // AS3.g:669:6: DecimalDigit
                     			    {
                     			    	mDecimalDigit(); if (state.failed) return ;
 
@@ -2863,7 +2863,7 @@ public partial class AS3Lexer : Lexer {
                     		;	// Stops C# compiler whinging that label 'loop11' has no statements
 
                     	Match('.'); if (state.failed) return ;
-                    	// AS3.g:668:24: ( DecimalDigit )*
+                    	// AS3.g:669:24: ( DecimalDigit )*
                     	do 
                     	{
                     	    int alt12 = 2;
@@ -2878,7 +2878,7 @@ public partial class AS3Lexer : Lexer {
                     	    switch (alt12) 
                     		{
                     			case 1 :
-                    			    // AS3.g:668:24: DecimalDigit
+                    			    // AS3.g:669:24: DecimalDigit
                     			    {
                     			    	mDecimalDigit(); if (state.failed) return ;
 
@@ -2893,7 +2893,7 @@ public partial class AS3Lexer : Lexer {
                     	loop12:
                     		;	// Stops C# compiler whining that label 'loop12' has no statements
 
-                    	// AS3.g:668:38: ( ExponentPart )?
+                    	// AS3.g:669:38: ( ExponentPart )?
                     	int alt13 = 2;
                     	int LA13_0 = input.LA(1);
 
@@ -2904,7 +2904,7 @@ public partial class AS3Lexer : Lexer {
                     	switch (alt13) 
                     	{
                     	    case 1 :
-                    	        // AS3.g:668:38: ExponentPart
+                    	        // AS3.g:669:38: ExponentPart
                     	        {
                     	        	mExponentPart(); if (state.failed) return ;
 
@@ -2917,9 +2917,9 @@ public partial class AS3Lexer : Lexer {
                     }
                     break;
                 case 2 :
-                    // AS3.g:669:6: ( '.' )? ( DecimalDigit )+ ( ExponentPart )?
+                    // AS3.g:670:6: ( '.' )? ( DecimalDigit )+ ( ExponentPart )?
                     {
-                    	// AS3.g:669:6: ( '.' )?
+                    	// AS3.g:670:6: ( '.' )?
                     	int alt14 = 2;
                     	int LA14_0 = input.LA(1);
 
@@ -2930,7 +2930,7 @@ public partial class AS3Lexer : Lexer {
                     	switch (alt14) 
                     	{
                     	    case 1 :
-                    	        // AS3.g:669:6: '.'
+                    	        // AS3.g:670:6: '.'
                     	        {
                     	        	Match('.'); if (state.failed) return ;
 
@@ -2939,7 +2939,7 @@ public partial class AS3Lexer : Lexer {
 
                     	}
 
-                    	// AS3.g:669:11: ( DecimalDigit )+
+                    	// AS3.g:670:11: ( DecimalDigit )+
                     	int cnt15 = 0;
                     	do 
                     	{
@@ -2955,7 +2955,7 @@ public partial class AS3Lexer : Lexer {
                     	    switch (alt15) 
                     		{
                     			case 1 :
-                    			    // AS3.g:669:11: DecimalDigit
+                    			    // AS3.g:670:11: DecimalDigit
                     			    {
                     			    	mDecimalDigit(); if (state.failed) return ;
 
@@ -2975,7 +2975,7 @@ public partial class AS3Lexer : Lexer {
                     	loop15:
                     		;	// Stops C# compiler whinging that label 'loop15' has no statements
 
-                    	// AS3.g:669:25: ( ExponentPart )?
+                    	// AS3.g:670:25: ( ExponentPart )?
                     	int alt16 = 2;
                     	int LA16_0 = input.LA(1);
 
@@ -2986,7 +2986,7 @@ public partial class AS3Lexer : Lexer {
                     	switch (alt16) 
                     	{
                     	    case 1 :
-                    	        // AS3.g:669:25: ExponentPart
+                    	        // AS3.g:670:25: ExponentPart
                     	        {
                     	        	mExponentPart(); if (state.failed) return ;
 
@@ -3012,8 +3012,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:673:4: ( ( '0' .. '9' ) )
-            // AS3.g:673:6: ( '0' .. '9' )
+            // AS3.g:674:4: ( ( '0' .. '9' ) )
+            // AS3.g:674:6: ( '0' .. '9' )
             {
             	if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) 
             	{
@@ -3042,8 +3042,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:677:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+ )
-            // AS3.g:677:6: ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+
+            // AS3.g:678:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+ )
+            // AS3.g:678:6: ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+
             {
             	if ( input.LA(1) == 'E' || input.LA(1) == 'e' ) 
             	{
@@ -3057,7 +3057,7 @@ public partial class AS3Lexer : Lexer {
             	    Recover(mse);
             	    throw mse;}
 
-            	// AS3.g:677:20: ( '+' | '-' )?
+            	// AS3.g:678:20: ( '+' | '-' )?
             	int alt18 = 2;
             	int LA18_0 = input.LA(1);
 
@@ -3088,7 +3088,7 @@ public partial class AS3Lexer : Lexer {
 
             	}
 
-            	// AS3.g:677:33: ( DecimalDigit )+
+            	// AS3.g:678:33: ( DecimalDigit )+
             	int cnt19 = 0;
             	do 
             	{
@@ -3104,7 +3104,7 @@ public partial class AS3Lexer : Lexer {
             	    switch (alt19) 
             		{
             			case 1 :
-            			    // AS3.g:677:33: DecimalDigit
+            			    // AS3.g:678:33: DecimalDigit
             			    {
             			    	mDecimalDigit(); if (state.failed) return ;
 
@@ -3139,7 +3139,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:681:4: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // AS3.g:682:4: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             // AS3.g:
             {
             	if ( (input.LA(1) >= '0' && input.LA(1) <= '9') || (input.LA(1) >= 'A' && input.LA(1) <= 'F') || (input.LA(1) >= 'a' && input.LA(1) <= 'f') ) 
@@ -3171,7 +3171,7 @@ public partial class AS3Lexer : Lexer {
     		{
             int _type = StringLiteral;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // AS3.g:687:2: ( '\"' ( DoubleStringCharacter )* '\"' | '\\'' ( SingleStringCharacter )* '\\'' )
+            // AS3.g:688:2: ( '\"' ( DoubleStringCharacter )* '\"' | '\\'' ( SingleStringCharacter )* '\\'' )
             int alt22 = 2;
             int LA22_0 = input.LA(1);
 
@@ -3194,10 +3194,10 @@ public partial class AS3Lexer : Lexer {
             switch (alt22) 
             {
                 case 1 :
-                    // AS3.g:687:4: '\"' ( DoubleStringCharacter )* '\"'
+                    // AS3.g:688:4: '\"' ( DoubleStringCharacter )* '\"'
                     {
                     	Match('\"'); if (state.failed) return ;
-                    	// AS3.g:687:8: ( DoubleStringCharacter )*
+                    	// AS3.g:688:8: ( DoubleStringCharacter )*
                     	do 
                     	{
                     	    int alt20 = 2;
@@ -3212,7 +3212,7 @@ public partial class AS3Lexer : Lexer {
                     	    switch (alt20) 
                     		{
                     			case 1 :
-                    			    // AS3.g:687:8: DoubleStringCharacter
+                    			    // AS3.g:688:8: DoubleStringCharacter
                     			    {
                     			    	mDoubleStringCharacter(); if (state.failed) return ;
 
@@ -3232,10 +3232,10 @@ public partial class AS3Lexer : Lexer {
                     }
                     break;
                 case 2 :
-                    // AS3.g:688:4: '\\'' ( SingleStringCharacter )* '\\''
+                    // AS3.g:689:4: '\\'' ( SingleStringCharacter )* '\\''
                     {
                     	Match('\''); if (state.failed) return ;
-                    	// AS3.g:688:9: ( SingleStringCharacter )*
+                    	// AS3.g:689:9: ( SingleStringCharacter )*
                     	do 
                     	{
                     	    int alt21 = 2;
@@ -3250,7 +3250,7 @@ public partial class AS3Lexer : Lexer {
                     	    switch (alt21) 
                     		{
                     			case 1 :
-                    			    // AS3.g:688:9: SingleStringCharacter
+                    			    // AS3.g:689:9: SingleStringCharacter
                     			    {
                     			    	mSingleStringCharacter(); if (state.failed) return ;
 
@@ -3285,7 +3285,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:692:4: (~ ( '\"' | '\\\\' | LineTerminator ) | '\\\\' EscapeSequence )
+            // AS3.g:693:4: (~ ( '\"' | '\\\\' | LineTerminator ) | '\\\\' EscapeSequence )
             int alt23 = 2;
             int LA23_0 = input.LA(1);
 
@@ -3308,7 +3308,7 @@ public partial class AS3Lexer : Lexer {
             switch (alt23) 
             {
                 case 1 :
-                    // AS3.g:692:6: ~ ( '\"' | '\\\\' | LineTerminator )
+                    // AS3.g:693:6: ~ ( '\"' | '\\\\' | LineTerminator )
                     {
                     	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '!') || (input.LA(1) >= '#' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\u2027') || (input.LA(1) >= '\u202A' && input.LA(1) <= '\uFFFE') ) 
                     	{
@@ -3326,7 +3326,7 @@ public partial class AS3Lexer : Lexer {
                     }
                     break;
                 case 2 :
-                    // AS3.g:693:6: '\\\\' EscapeSequence
+                    // AS3.g:694:6: '\\\\' EscapeSequence
                     {
                     	Match('\\'); if (state.failed) return ;
                     	mEscapeSequence(); if (state.failed) return ;
@@ -3347,7 +3347,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:697:4: (~ ( '\\'' | '\\\\' | LineTerminator ) | '\\\\' EscapeSequence )
+            // AS3.g:698:4: (~ ( '\\'' | '\\\\' | LineTerminator ) | '\\\\' EscapeSequence )
             int alt24 = 2;
             int LA24_0 = input.LA(1);
 
@@ -3370,7 +3370,7 @@ public partial class AS3Lexer : Lexer {
             switch (alt24) 
             {
                 case 1 :
-                    // AS3.g:697:6: ~ ( '\\'' | '\\\\' | LineTerminator )
+                    // AS3.g:698:6: ~ ( '\\'' | '\\\\' | LineTerminator )
                     {
                     	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '&') || (input.LA(1) >= '(' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\u2027') || (input.LA(1) >= '\u202A' && input.LA(1) <= '\uFFFE') ) 
                     	{
@@ -3388,7 +3388,7 @@ public partial class AS3Lexer : Lexer {
                     }
                     break;
                 case 2 :
-                    // AS3.g:698:6: '\\\\' EscapeSequence
+                    // AS3.g:699:6: '\\\\' EscapeSequence
                     {
                     	Match('\\'); if (state.failed) return ;
                     	mEscapeSequence(); if (state.failed) return ;
@@ -3409,7 +3409,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:702:4: ( CharacterEscapeSequence | '0' | HexEscapeSequence | UnicodeEscapeSequence )
+            // AS3.g:703:4: ( CharacterEscapeSequence | '0' | HexEscapeSequence | UnicodeEscapeSequence )
             int alt25 = 4;
             int LA25_0 = input.LA(1);
 
@@ -3440,28 +3440,28 @@ public partial class AS3Lexer : Lexer {
             switch (alt25) 
             {
                 case 1 :
-                    // AS3.g:702:6: CharacterEscapeSequence
+                    // AS3.g:703:6: CharacterEscapeSequence
                     {
                     	mCharacterEscapeSequence(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // AS3.g:703:6: '0'
+                    // AS3.g:704:6: '0'
                     {
                     	Match('0'); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // AS3.g:704:6: HexEscapeSequence
+                    // AS3.g:705:6: HexEscapeSequence
                     {
                     	mHexEscapeSequence(); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // AS3.g:705:6: UnicodeEscapeSequence
+                    // AS3.g:706:6: UnicodeEscapeSequence
                     {
                     	mUnicodeEscapeSequence(); if (state.failed) return ;
 
@@ -3481,7 +3481,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:709:4: ( SingleEscapeCharacter | NonEscapeCharacter )
+            // AS3.g:710:4: ( SingleEscapeCharacter | NonEscapeCharacter )
             int alt26 = 2;
             int LA26_0 = input.LA(1);
 
@@ -3504,14 +3504,14 @@ public partial class AS3Lexer : Lexer {
             switch (alt26) 
             {
                 case 1 :
-                    // AS3.g:709:6: SingleEscapeCharacter
+                    // AS3.g:710:6: SingleEscapeCharacter
                     {
                     	mSingleEscapeCharacter(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // AS3.g:710:6: NonEscapeCharacter
+                    // AS3.g:711:6: NonEscapeCharacter
                     {
                     	mNonEscapeCharacter(); if (state.failed) return ;
 
@@ -3531,8 +3531,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:714:4: (~ ( EscapeCharacter | LineTerminator ) )
-            // AS3.g:714:6: ~ ( EscapeCharacter | LineTerminator )
+            // AS3.g:715:4: (~ ( EscapeCharacter | LineTerminator ) )
+            // AS3.g:715:6: ~ ( EscapeCharacter | LineTerminator )
             {
             	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '!') || (input.LA(1) >= '#' && input.LA(1) <= '&') || (input.LA(1) >= '(' && input.LA(1) <= '/') || (input.LA(1) >= ':' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= 'a') || (input.LA(1) >= 'c' && input.LA(1) <= 'e') || (input.LA(1) >= 'g' && input.LA(1) <= 'm') || (input.LA(1) >= 'o' && input.LA(1) <= 'q') || input.LA(1) == 's' || input.LA(1) == 'w' || (input.LA(1) >= 'y' && input.LA(1) <= '\u2027') || (input.LA(1) >= '\u202A' && input.LA(1) <= '\uFFFE') ) 
             	{
@@ -3561,7 +3561,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:718:4: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
+            // AS3.g:719:4: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
             // AS3.g:
             {
             	if ( input.LA(1) == '\"' || input.LA(1) == '\'' || input.LA(1) == '\\' || input.LA(1) == 'b' || input.LA(1) == 'f' || input.LA(1) == 'n' || input.LA(1) == 'r' || input.LA(1) == 't' || input.LA(1) == 'v' ) 
@@ -3591,7 +3591,7 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:722:4: ( SingleEscapeCharacter | DecimalDigit | 'x' | 'u' )
+            // AS3.g:723:4: ( SingleEscapeCharacter | DecimalDigit | 'x' | 'u' )
             int alt27 = 4;
             switch ( input.LA(1) ) 
             {
@@ -3643,28 +3643,28 @@ public partial class AS3Lexer : Lexer {
             switch (alt27) 
             {
                 case 1 :
-                    // AS3.g:722:6: SingleEscapeCharacter
+                    // AS3.g:723:6: SingleEscapeCharacter
                     {
                     	mSingleEscapeCharacter(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // AS3.g:723:6: DecimalDigit
+                    // AS3.g:724:6: DecimalDigit
                     {
                     	mDecimalDigit(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // AS3.g:724:6: 'x'
+                    // AS3.g:725:6: 'x'
                     {
                     	Match('x'); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // AS3.g:725:6: 'u'
+                    // AS3.g:726:6: 'u'
                     {
                     	Match('u'); if (state.failed) return ;
 
@@ -3684,8 +3684,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:729:4: ( 'x' HexDigit HexDigit )
-            // AS3.g:729:6: 'x' HexDigit HexDigit
+            // AS3.g:730:4: ( 'x' HexDigit HexDigit )
+            // AS3.g:730:6: 'x' HexDigit HexDigit
             {
             	Match('x'); if (state.failed) return ;
             	mHexDigit(); if (state.failed) return ;
@@ -3705,8 +3705,8 @@ public partial class AS3Lexer : Lexer {
     {
     		try
     		{
-            // AS3.g:733:4: ( 'u' HexDigit HexDigit HexDigit HexDigit )
-            // AS3.g:733:6: 'u' HexDigit HexDigit HexDigit HexDigit
+            // AS3.g:734:4: ( 'u' HexDigit HexDigit HexDigit HexDigit )
+            // AS3.g:734:6: 'u' HexDigit HexDigit HexDigit HexDigit
             {
             	Match('u'); if (state.failed) return ;
             	mHexDigit(); if (state.failed) return ;
@@ -4291,8 +4291,8 @@ public partial class AS3Lexer : Lexer {
     // $ANTLR start "synpred1_AS3"
     public void synpred1_AS3_fragment() //throws RecognitionException
     {   
-        // AS3.g:224:6: ( IdentifierStart )
-        // AS3.g:224:7: IdentifierStart
+        // AS3.g:225:6: ( IdentifierStart )
+        // AS3.g:225:7: IdentifierStart
         {
         	mIdentifierStart(); if (state.failed) return ;
 
@@ -4375,7 +4375,7 @@ public partial class AS3Lexer : Lexer {
 
         override public string Description
         {
-            get { return "666:3: fragment DecimalLiteral : ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? );"; }
+            get { return "667:3: fragment DecimalLiteral : ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? );"; }
         }
 
     }

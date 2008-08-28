@@ -25,6 +25,7 @@ options
 {
 	language=CSharp2;
 	output=AST;
+	ASTLabelType=CommonTree;
 	backtrack=true;
 	memoize=true;
 	k=2;
@@ -106,7 +107,7 @@ inputElementRegexp
 */
 
 WhiteSpace
-	: ('\t' | '\v' | '\f' | ' ' | '\u00A0') {$Channel=HIDDEN;}
+	: ('\t' | '\v' | '\f' | ' ' | '\u00A0') {$channel=HIDDEN;}
 	;
 
 LineTerminator
@@ -123,15 +124,15 @@ Comment
 	;
 	fragment
 		MultiLineComment
-			: '/*' ~'*' (options {greedy=false;} : .)* '*/' {$Channel=HIDDEN;}
+			: '/*' ~'*' (options {greedy=false;} : .)* '*/' {$channel=HIDDEN;}
 			;
 	fragment	
 		MultiLineDocumentation
-			: '/**' (options {greedy=false;} : .)* '*/' {$Channel=HIDDEN;}
+			: '/**' (options {greedy=false;} : .)* '*/' {$channel=HIDDEN;}
 			;
 	fragment
 		SingleLineComment
-			: '//' ~(LineTerminator)* {$Channel=HIDDEN;}
+			: '//' ~(LineTerminator)* {$channel=HIDDEN;}
 			;
 /*
 token
