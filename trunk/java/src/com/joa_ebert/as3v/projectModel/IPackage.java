@@ -6,7 +6,7 @@ public interface IPackage {
 
 	String name();
 
-	String fileSystemPath();
+	String filePath();
 
 	IPackage parent();
 

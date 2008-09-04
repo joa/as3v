@@ -102,12 +102,12 @@ T__130 : 'private' ;
 T__131 : 'protected' ;
 T__132 : '.<' ;
 
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 57
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 59
 WhiteSpace
 	: ('\t' | '\v' | '\f' | ' ' | '\u00A0') { $channel = HIDDEN; }
 	;
 
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 61
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 63
 LineTerminator
 	: '\r\n'
 	| '\r'
@@ -116,17 +116,17 @@ LineTerminator
 	| '\u2029'
 	;
 
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 69
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 71
 Comment
 	: MultiLineComment { $channel=HIDDEN; }
 	| SingleLineComment { $channel=HIDDEN; }
 	;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 73
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 75
 fragment
 		MultiLineComment
 			: '/*' (options {greedy=false;} : .)* '*/'
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 77
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 79
 fragment
 		SingleLineComment
 			: '//' ~(LineTerminator)* LineTerminator
@@ -210,11 +210,11 @@ fragment FutureReservedWord
 	;
 */
 
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 160
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 162
 Identifier //TODO fix me -> identifier could be reserved word ...
 	: IdentifierStart IdentifierPart*
 	;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 163
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 165
 fragment
 		IdentifierStart
 			: UnicodeLetter
@@ -222,7 +222,7 @@ fragment
 			| '_'
 			| '\\' UnicodeEscapeSequence
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 170
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 172
 fragment
 		IdentifierPart
 			: (IdentifierStart) => IdentifierStart
@@ -230,7 +230,7 @@ fragment
 			| UnicodeConnectorPunctuation
 			;
 			
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 177
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 179
 fragment UnicodeLetter
 	: '\u0041'..'\u005A'
 	| '\u0061'..'\u007A'
@@ -495,7 +495,7 @@ fragment UnicodeLetter
 	| '\uFFDA'..'\uFFDC'
 	;
 	
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 441
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 443
 fragment UnicodeCombiningMark
 	: '\u0300'..'\u034E'
 	| '\u0360'..'\u0362'
@@ -599,7 +599,7 @@ fragment UnicodeCombiningMark
 	| '\uFE20'..'\uFE23'
 	;
 
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 544
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 546
 fragment UnicodeDigit
 	: '\u0030'..'\u0039'
 	| '\u0660'..'\u0669'
@@ -623,7 +623,7 @@ fragment UnicodeDigit
 	| '\uFF10'..'\uFF19'
 	;
 	
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 567
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 569
 fragment UnicodeConnectorPunctuation
 	: '\u005F'
 	| '\u203F'..'\u2040'
@@ -645,46 +645,46 @@ DivPunctuator
 	;
 */
 
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 595
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 597
 fragment
 	NullLiteral
 		: 'null'
 		;
 	
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 600
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 602
 fragment
 	BooleanLiteral
 		: 'true'
 		| 'false'
 		;
 	
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 606
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 608
 NumericLiteral
 	: DecimalLiteral
 	| HexIntegerLiteral
 	;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 610
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 612
 fragment
 		HexIntegerLiteral
 			: '0' ('x' | 'X') HexDigit+
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 614
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 616
 fragment
 		DecimalLiteral
 			: DecimalDigit+ '.' DecimalDigit* ExponentPart?
 			| '.'? DecimalDigit+ ExponentPart?
 			;	
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 619
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 621
 fragment
 		DecimalDigit
 			: ('0'..'9')
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 623
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 625
 fragment
 		ExponentPart
 			: ( 'e' | 'E' ) ('+' | '-')? DecimalDigit+
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 627
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 629
 fragment	
 		HexDigit
 			: '0'..'9'
@@ -692,24 +692,24 @@ fragment
 			| 'A'..'F'
 			;
 		
-// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 634
+// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 636
 StringLiteral
 	: '"' DoubleStringCharacter* '"'
 	| '\'' SingleStringCharacter* '\''
 	;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 638
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 640
 fragment
 		DoubleStringCharacter
 			: ~('"' | '\\' | LineTerminator)
 			| '\\' EscapeSequence
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 643
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 645
 fragment
 		SingleStringCharacter
 			: ~('\'' | '\\' | LineTerminator)
 			| '\\' EscapeSequence
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 648
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 650
 fragment
 		EscapeSequence
 			: CharacterEscapeSequence
@@ -717,23 +717,23 @@ fragment
 			| HexEscapeSequence
 			| UnicodeEscapeSequence
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 655
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 657
 fragment
 		CharacterEscapeSequence
 			: SingleEscapeCharacter
 			| NonEscapeCharacter
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 660
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 662
 fragment
 		NonEscapeCharacter
 			: ~(EscapeCharacter | LineTerminator)
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 664
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 666
 fragment
 		SingleEscapeCharacter
 			: '\'' | '"' | '\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v'
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 668
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 670
 fragment
 		EscapeCharacter
 			: SingleEscapeCharacter
@@ -741,12 +741,12 @@ fragment
 			| 'x'
 			| 'u'
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 675
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 677
 fragment
 		HexEscapeSequence
 			: 'x' HexDigit HexDigit
 			;
-	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 679
+	// $ANTLR src "./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g" 681
 fragment
 		UnicodeEscapeSequence
 			: 'u' HexDigit HexDigit HexDigit HexDigit

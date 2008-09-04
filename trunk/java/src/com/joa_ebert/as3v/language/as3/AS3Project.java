@@ -25,21 +25,21 @@ public final class AS3Project implements IProject {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void build(String fileSystemPath, ArrayList<String> packageRoots)
+	public void build(String filePath, ArrayList<String> packageRoots)
 			throws IOException {
-		if (!fileSystemPath.endsWith(File.separator))
-			fileSystemPath += File.separator;
+		if (!filePath.endsWith(File.separator))
+			filePath += File.separator;
 
 		File[] systemRoots = File.listRoots();
 		
-		File project = new File(fileSystemPath);
+		File project = new File(filePath);
 
 		if (!project.exists()) {
 			throw new IOException("Project path does not exist.");
 		}
 		
 		_name = project.getName();
-		_path = fileSystemPath;
+		_path = filePath;
 
 		for(Iterator<String> iter = packageRoots.iterator(); iter.hasNext();)
 		{
@@ -58,7 +58,7 @@ public final class AS3Project implements IProject {
 
 			if(!isAbsolute)
 			{
-				rootPath = fileSystemPath + rootPath;
+				rootPath = filePath + rootPath;
 			}
 			
 			AS3PackageRoot root = new AS3PackageRoot();
@@ -109,7 +109,7 @@ public final class AS3Project implements IProject {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String fileSystemPath() {
+	public String filePath() {
 		return _path;
 	}
 

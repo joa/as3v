@@ -42,7 +42,7 @@ public class AS3Validator implements IValidator {
 	@Override
 	public void validate(ICompilationUnit compilationUnit) throws Exception {
 		final boolean USE_XML_BUILDER = true;
-		System.out.println("[i] Validating " + compilationUnit.unitPath() + " (" + compilationUnit.fileSystemPath() + ")");
+		System.out.println("[i] Validating " + compilationUnit.unitPath() + " (" + compilationUnit.filePath() + ")");
 
 		DebugEventListener listener;
 
@@ -53,7 +53,7 @@ public class AS3Validator implements IValidator {
 
 		AS3Lexer lexer = new AS3Lexer(new ANTLRReaderStream(
 				new InputStreamReader(new FileInputStream(compilationUnit
-						.fileSystemPath()), "UTF8")));
+						.filePath()), "UTF8")));
 
 		AS3Parser parser = new AS3Parser(new CommonTokenStream(lexer), listener);
 
@@ -80,6 +80,7 @@ public class AS3Validator implements IValidator {
 		}
 	}
 
+	@SuppressWarnings("all")
 	private void showParseTree(ParseTree tree, int depth) {
 		if (null == tree)
 			return;

@@ -20,7 +20,7 @@ public interface IProject {
 	 */
 	String name();
 
-	String fileSystemPath();
+	String filePath();
 
 	boolean hasCompilationUnit(String unitPath);
 
