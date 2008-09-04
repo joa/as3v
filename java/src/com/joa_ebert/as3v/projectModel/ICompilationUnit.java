@@ -7,7 +7,7 @@ public interface ICompilationUnit {
 
 	String unitPath();
 
-	String fileSystemPath();
+	String filePath();
 
 	void validate() throws Exception;
 

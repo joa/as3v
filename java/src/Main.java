@@ -78,11 +78,11 @@ public class Main {
 			for (Iterator<IPackageRoot> iter = project.rootIterator(); iter
 					.hasNext();) {
 				IPackageRoot root = iter.next();
-				String path = root.fileSystemPath();
+				String path = root.filePath();
 
-				if (path.startsWith(project.fileSystemPath()))
+				if (path.startsWith(project.filePath()))
 					path = "." + File.separator
-							+ path.substring(project.fileSystemPath().length());
+							+ path.substring(project.filePath().length());
 
 				System.out.println((!firstPackageRoot ? "\t\t" : "") + path);
 

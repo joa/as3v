@@ -16,12 +16,12 @@ public class AS3CompilationUnit implements ICompilationUnit {
 	private String _unitPath = null;
 
 	protected void build(AS3Project project, AS3Package parent,
-			String fileSystemPath) {
+			String filePath) {
 		_project = project;
 		_package = parent;
-		_path = fileSystemPath;
+		_path = filePath;
 
-		_name = new File(fileSystemPath).getName();
+		_name = new File(filePath).getName();
 		_name = _name.substring(0, _name.length() - 3);
 	}
 
@@ -29,7 +29,7 @@ public class AS3CompilationUnit implements ICompilationUnit {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String fileSystemPath() {
+	public String filePath() {
 		return _path;
 	}
 

@@ -23,12 +23,12 @@ public class AS3Package implements IPackage {
 	}
 
 	protected void build(AS3Project project, AS3Package parent,
-			String fileSystemPath) {
-		File packageFile = new File(fileSystemPath);
+			String filePath) {
+		File packageFile = new File(filePath);
 
 		_project = project;
 		_parent = parent;
-		_path = fileSystemPath;
+		_path = filePath;
 		_name = packageFile.getName();
 
 		String files[] = packageFile.list();
@@ -104,7 +104,7 @@ public class AS3Package implements IPackage {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String fileSystemPath() {
+	public String filePath() {
 		return _path;
 	}
 
