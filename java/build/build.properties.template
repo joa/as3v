@@ -1,0 +1,2 @@
+# Path to ANTLR binary to compile grammar files
+antlr3-1.jar = 
