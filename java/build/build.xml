@@ -2,7 +2,7 @@
 <project name="com.joa_ebert.AS3V" default="compile" basedir="../">
 	<property file="${basedir}/build/build.properties"/>
 	<target name="properties">
-		<fail unless="antlr3-1.jar" message="The variable 'antlr3-1.jar' has to be defined in your build.properties file."/>
+		<fail unless="antlr-3.1.jar" message="The variable 'antlr-3.1.jar' has to be defined in your build.properties file."/>
 	</target>
 	<target name="clean"/>
 	<target name="compile" depends="clean, antlr">
@@ -12,7 +12,7 @@
 		<java
 			fork="true"
 			failonerror="true"
-			classpath="${antlr3-1.jar}"
+			classpath="${antlr-3.1.jar}"
 			maxmemory="512m"
 			classname="org.antlr.Tool">
 			<arg line="-debug"/>
@@ -21,7 +21,7 @@
 			<arg line="-Xconversiontimeout 4800"/>
 			<arg line="./src/com/joa_ebert/as3v/language/as3/antlr/AS3.g"/>
 		</java>
-		<eclipse.refreshLocal resource="./src/com/joa_ebert/as3v/language/as3/antlr/AS3Lexer.java"/>
-		<eclipse.refreshLocal resource="./src/com/joa_ebert/as3v/language/as3/antlr/AS3Parser.java"/>
+		<!--eclipse.refreshLocal resource="./src/com/joa_ebert/as3v/language/as3/antlr/AS3Lexer.java"/>
+		<eclipse.refreshLocal resource="./src/com/joa_ebert/as3v/language/as3/antlr/AS3Parser.java"/-->
 	</target>
 </project>
