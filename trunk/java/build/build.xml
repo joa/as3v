@@ -9,6 +9,7 @@
 		<echo message="Nothing to do yet ..."/>
 	</target>
 	<target name="antlr" depends="properties">
+		<echo message="Generating parser and lexer using ${antlr-3.1.jar} ..."/>
 		<java
 			fork="true"
 			failonerror="true"
